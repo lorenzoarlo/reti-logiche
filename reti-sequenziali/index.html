@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#ff7f50" />
+    <meta name="keywords" content="reti logiche, reti combinatorie, reti sequenziali" />
+    <meta name="description" content="###about###">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Reti logiche - Reti sequenziali</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Reti logiche
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <h1 class="page-title">
+                Reti sequenziali
+            </h1>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">indice</h1>
+            <div class="index-container content-width">
+                <ul class="parent-ul">
+ <li class="subsection-li">
+  <a href="stato-di-una-rete-sequenziale.html">
+   Stato di una rete sequenziale
+  </a>
+  <ul>
+   <li class="definition-li">
+    <a href="stato-di-una-rete-sequenziale.html#def4-1">
+     Definizione - Rete sequenziale
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="stato-di-una-rete-sequenziale.html#def4-2">
+     Definizione - Stato di una rete sequenziale
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="subsection-li">
+  <a href="reti-sequenziali-asincrone.html">
+   Reti sequenziali asincrone
+  </a>
+  <ul>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-3">
+     Definizione - Rete sequenziale asincrona (RSA)
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-4">
+     Definizione - Memoria in una RSA
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-5">
+     Definizione - Finite State Machine (FSM)
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-6">
+     Definizione - Comportamento di una RSA
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-7">
+     Definizione - Grafo degli stati - Automa di Mealy
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-8">
+     Definizione - Grafo degli stati - Automa di Moore
+    </a>
+   </li>
+   <li class="myexample-li">
+    <a href="reti-sequenziali-asincrone.html#example17">
+     Esempio - Descrivere il comportamento di una RSA con un grafo a stati - Lampada da tavolo
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-9">
+     Definizione - Stato iniziale (o reset)
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-10">
+     Definizione - Tabella di flusso - Automa di Mealy
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-11">
+     Definizione - Tabella di flusso - Automa di Moore
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-12">
+     Definizione - Tabella delle transizioni
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="reti-sequenziali-asincrone.html#def4-13">
+     Definizione - Da tabella delle transizioni a espressioni combinatorie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="subsection-li">
+  <a href="comportamenti-in-transitorio.html">
+   Comportamenti in transitorio
+  </a>
+  <ul>
+   <li class="definition-li">
+    <a href="comportamenti-in-transitorio.html#def4-14">
+     Definizione - Comportamento a regime e in transitorio
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="comportamenti-in-transitorio.html#def4-15">
+     Definizione - Comportamento in transitorio - Ritardo puro
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="comportamenti-in-transitorio.html#def4-16">
+     Definizione - Comportamento in transitorio - Alea dinamica
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="comportamenti-in-transitorio.html#def4-17">
+     Definizione - Comportamento in transitorio - Alea statica
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="subsection-li">
+  <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html">
+   Vincoli per il corretto funzionamento di una RSA
+  </a>
+  <ul>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-18">
+     Definizione - Funzionamento generale di una RSA
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-19">
+     Definizione - Vincolo di funzionamento di una RSA - Durata degli ingressi
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-20">
+     Definizione - Vincolo di funzionamento di una RSA - Codifica degli ingressi
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-21">
+     Definizione - Vincolo di funzionamento di una RSA - Evitare le alee statiche negli anelli di retroazione
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-22">
+     Definizione - Vincolo di funzionamento di una RSA - Codifica degli stati
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-23">
+     Definizione - Grafo delle adiacenze
+    </a>
+   </li>
+   <li class="definition-li">
+    <a href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-24">
+     Definizione - Corse critiche e non critiche
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+            </div>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="../alu/aritmetica-binaria.html" rel="nofollow"><span>Aritmetica binaria</span></a>    
+                <a class="navigation-button next" href="stato-di-una-rete-sequenziale.html" rel="nofollow"><span>Stato di una rete sequenziale</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

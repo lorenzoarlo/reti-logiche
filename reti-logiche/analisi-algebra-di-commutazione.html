@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#ff7f50" />
+    <meta name="keywords" content="reti logiche, reti combinatorie, reti sequenziali" />
+    <meta name="description" content="Il seguente sito contiene gli appunti e le definizioni del corso 'Reti logiche'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Reti logiche - Reti logiche - Analisi - Algebra di commutazione</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Reti logiche
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Reti logiche
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Analisi - Algebra di commutazione</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def2-7">
+ <h2 class="environment-title">
+  Definizione -
+  Da tabella della verità a espressioni
+ </h2>
+ <div class="environment-body">
+  Dato che ogni tabella della verità può essere espressa da diverse espressioni, si pone il problema di quale tra queste utilizzare.     Uno dei metodi più semplici è utilizzare le espressioni canoniche.
+ </div>
+</div>
+<div class="definition environment" id="def2-8">
+ <h2 class="environment-title">
+  Definizione -
+  Espressione canonica SP (Somma di Prodotti)
+ </h2>
+ <div class="environment-body">
+  "Ogni funzione di
+  <span class="math-span">
+   \( n\)
+  </span>
+  variabili è descritta (ovvero si può creare) da una somma di tanti prodotti logici quante sono le configurazioni per cui vale
+  <span class="math-span">
+   \( 1\)
+  </span>
+  . In ciascun prodotto (detto anche mintermine) appare ogni variabile in forma vera se nella configurazione corrente vale
+  <span class="math-span">
+   \( 1\)
+  </span>
+  , in forma negata se vale
+  <span class="math-span">
+   \( 0\)
+  </span>
+  ".
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Why works?
+   </h3>
+   <div class="environment-body">
+    Tale algoritmo è valido in quanto è possibile considerare il valore
+    <span class="math-span">
+     \( 1\)
+    </span>
+    come neutro per il gate AND e il valore
+    <span class="math-span">
+     \( 1\)
+    </span>
+    come dominante nel gate OR.
+    <br/>
+    Considerando quindi le configurazioni che hanno valore
+    <span class="math-span">
+     \( 1\)
+    </span>
+    , si va a creare per il prodotto corrispondente il valore
+    <span class="math-span">
+     \( 1\)
+    </span>
+    che andrà poi a modificare l'uscita.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="myexample environment" id="example5">
+ <h2 class="environment-title">
+  Esempio -
+  Ottenere l'espressione canonica SP da una tabella della verità
+ </h2>
+ <div class="environment-body">
+  Considerando la seguente tabella della verità
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-14.png"/>
+   </div>
+  </div>
+  si vuole ottenere l'espressione canonica SP. Consideriamo quindi le configurazioni per cui la funzione (ovvero l'uscita
+  <span class="math-span">
+   \( z\)
+  </span>
+  ) vale
+  <span class="math-span">
+   \( 1\)
+  </span>
+  : si hanno quindi due casi.
+  <br/>
+  Procediamo quindi con la consapevolezza che avremo la somma di due prodotti logici, ovvero
+  <span class="math-block">
+   \[         (\ldots) + (\ldots)     \]
+  </span>
+  Consideriamo quindi queste due configurazioni:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-15.png"/>
+   </div>
+  </div>
+  L'algoritmo prevede che in ciascun prodotto ogni variabile appare nella sua forma "vera" se ha valore
+  <span class="math-span">
+   \( 1\)
+  </span>
+  mentre nella sua forma negata se ha valore
+  <span class="math-span">
+   \( 0\)
+  </span>
+  .
+  <br/>
+  Considerando quindi la prima configurazione, avremo che il mintermine corrispondente è il seguente
+  <span class="math-block">
+   \[         (\bar{x} \cdot y) + (\ldots)     \]
+  </span>
+  in quanto
+  <span class="math-span">
+   \( x\)
+  </span>
+  ha valore
+  <span class="math-span">
+   \( 0\)
+  </span>
+  e
+  <span class="math-span">
+   \( y\)
+  </span>
+  ha valore
+  <span class="math-span">
+   \( 1\)
+  </span>
+  . Procedendo in maniera analoga, avremo che il secondo mintermine è il seguente:
+  <span class="math-block">
+   \[         (\bar{x} \cdot y) + (x \cdot \bar{y})     \]
+  </span>
+ </div>
+</div>
+<div class="definition environment" id="def2-9">
+ <h2 class="environment-title">
+  Definizione -
+  Espressione canonica PS (Prodotto di somme)
+ </h2>
+ <div class="environment-body">
+  "Ogni funzione di
+  <span class="math-span">
+   \( n\)
+  </span>
+  variabili è descritta (ovvero può essere creare) da un prodotto di tante somme logiche quante sono le configurazioni per cui vale
+  <span class="math-span">
+   \( 0\)
+  </span>
+  . In ciascuna somma (detta anche maxtermine) appare ogni variabile in forma vera se nella configurazione corrente vale
+  <span class="math-span">
+   \( 0\)
+  </span>
+  , in forma negata se vale
+  <span class="math-span">
+   \( 1\)
+  </span>
+  ".
+ </div>
+</div>
+<div class="definition environment" id="def2-10">
+ <h2 class="environment-title">
+  Definizione -
+  Notazione simbolica per le espressioni canoniche
+ </h2>
+ <div class="environment-body">
+  Considerando una funzione
+  <span class="math-span">
+   \( S\)
+  </span>
+  dipendente da tre ingressi
+  <span class="math-span">
+   \( a, b, c\)
+  </span>
+  <span class="math-block">
+   \[         S(a, b, c) =          \]
+  </span>
+  per indicare la sua realizzazione con la forma canonica SP si utilizza la seguente notazione
+  <span class="math-block">
+   \[         S(a, b, c) = \sum_{3} m(1, 2, 3, 4)     \]
+  </span>
+  dove il
+  <span class="math-span">
+   \( 3\)
+  </span>
+  a pedice indica il numero di ingressi e
+  <span class="math-span">
+   \( 1, 2, 3, 4\)
+  </span>
+  sono le configurazioni in binario degli ingressi in cui la funzione vale
+  <span class="math-span">
+   \( 1\)
+  </span>
+  (i mintermini).     Tale espresione equivale alla seguente espressione
+  <span class="math-block">
+   \[         S(a, b, c) = (a' \cdot b' \cdot c) + (a' \cdot b \cdot c') + (a' \cdot b \cdot c) + (a \cdot b' \cdot c')     \]
+  </span>
+  <br/>
+  Analogamente, per indicare la sua realizzazione con la forma canonica
+  <span class="math-span">
+   \( PS\)
+  </span>
+  , si utilizza la seguente notazione
+  <span class="math-block">
+   \[         S(a, b, c) = \prod_{3} M(5, 6, 7, 8)     \]
+  </span>
+  dove il
+  <span class="math-span">
+   \( 3\)
+  </span>
+  a pedice indica il numero di ingressi e
+  <span class="math-span">
+   \( 5, 6, 7, 8\)
+  </span>
+  sono le configurazioni in binario degli ingressi in cui la funzione vale
+  <span class="math-span">
+   \( 0\)
+  </span>
+  (i maxtermini).
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="sintesi-algebra-di-commutazione.html" rel="nofollow"><span>Sintesi - Algebra di commutazione</span></a>
+                <a class="navigation-button next" href="equivalenze-notevoli.html" rel="nofollow"><span>Equivalenze notevoli</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

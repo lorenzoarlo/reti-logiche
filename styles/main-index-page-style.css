@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+  .definition-li,
+  .demonstration-li,
+  .myexample-li {
+    display: none;
+  }
+}
+
+.about-wrapper {
+  align-self: center;
+}
+
+.about-wrapper p {
+  margin: 0 auto;
+  text-align: justify;
+}

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index-style.css" />
+    <link rel="stylesheet" href="./styles/main-index-page-style.css" />
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <script src="./scripts/script.js"></script>
+    <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#ff7f50" />
+    <meta name="keywords" content="reti logiche, reti combinatorie, reti sequenziali" />
+    <meta name="description" content="Il seguente sito contiene gli appunti e le definizioni del corso 'Reti logiche'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Reti logiche</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper content-width">
+                <h1 class="title">
+                    Reti logiche
+                </h1>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <div class="about-wrapper content-width">
+                <h1 class="section-title">about</h1>
+                <p>
+                    Il seguente sito contiene gli appunti e le definizioni del corso 'Reti logiche'.
+                </p>
+            </div>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">indice</h1>
+            <div class="index-container content-width">
+                <ul class="parent-ul">
+ <li class="section-li">
+  <a href="nozioni-di-base/">
+   Nozioni di base
+  </a>
+  <ul>
+   <li class="subsection-li">
+    <a href="nozioni-di-base/segnali.html">
+     Segnali
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="nozioni-di-base/segnali.html#def1-1">
+       Definizione - Segnali analogici e digitali
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/segnali.html#def1-2">
+       Definizione - Macchina digitale
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/segnali.html#def1-3">
+       Definizione - Segnali digitali binari
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/segnali.html#def1-4">
+       Definizione - Variabili binarie
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="nozioni-di-base/gate-e-reti-logiche.html">
+     Gate e reti logiche
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-5">
+       Definizione - Interruttore
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-6">
+       Definizione - Rete logica
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-7">
+       Definizione - Gate
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-8">
+       Definizione - Gate con  \( n\)  ingressi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-9">
+       Definizione - Gate con  \( 1\)  ingresso
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-10">
+       Definizione - Il gate NOT
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-11">
+       Definizione - Gate con 2 ingressi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-12">
+       Definizione - Il gate AND
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-13">
+       Definizione - Il gate OR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-14">
+       Definizione - Il gate EXOR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-15">
+       Definizione - Il gate NAND
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-16">
+       Definizione - Il gate NOR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-17">
+       Definizione - Il gate EXNOR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-18">
+       Definizione - Gate con  \( 3\)  ingressi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-19">
+       Definizione - Diagrammi ad occhio
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-20">
+       Definizione - Diagrammi ad occhio e bus di segnali
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-21">
+       Definizione - Ritardo inerziale di propagazione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-22">
+       Definizione - Possibili montaggi tra gate
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-23">
+       Definizione - Rete logica
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-24">
+       Definizione - Rete (o macchina) combinatoria
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-25">
+       Definizione - Rete (o macchina) sequenziale
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-26">
+       Definizione - Composizione e decomposizione di reti logiche combinatorie
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-27">
+       Definizione - Comportamento e struttura di una rete logica
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-28">
+       Definizione - Funzioni complete e incomplete
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/gate-e-reti-logiche.html#def1-29">
+       Definizione - Tabella della verità
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="nozioni-di-base/codifiche-e-rappresentazioni.html">
+     Codifiche e rappresentazioni
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-30">
+       Definizione - Informazione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-31">
+       Definizione - Codifica binaria dell'informazione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-32">
+       Definizione - Codice binario
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-33">
+       Definizione - Condivisione codice binario tra sorgente e destinatario
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-34">
+       Definizione - Codici ridondanti e non rinondanti
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-35">
+       Definizione - Rappresentazione dei numeri senza segno
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-36">
+       Definizione - Valore di un numero in base  \( B\)
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#example1">
+       Esempio - Valore di un numero in base  \( 2\)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-37">
+       Definizione - Rappresentazione di un numero in base  \( B\)  (Conversione iterativa)
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#example2">
+       Esempio - Rappresentazione di un numero in base  \( 2\)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-38">
+       Definizione - Conversione da una base ad un'altra
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-39">
+       Definizione - Codice BCD
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-40">
+       Definizione - Codice di Gray
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-41">
+       Definizione - Codici interni ed esterni
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-42">
+       Definizione - Rappresentazione dei caratteri (ASCII)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-43">
+       Definizione - Rappresentazione dei caratteri (UNICODE)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#def1-44">
+       Definizione - Ottenere dal codice UNICODE la codifica UTF-8
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="nozioni-di-base/codifiche-e-rappresentazioni.html#example3">
+       Esempio - Da codice UNICODE a codifica UTF-8
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="section-li">
+  <a href="reti-logiche/">
+   Reti logiche
+  </a>
+  <ul>
+   <li class="subsection-li">
+    <a href="reti-logiche/sintesi-algebra-di-commutazione.html">
+     Sintesi - Algebra di commutazione
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-1">
+       Definizione - Algebra binaria
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-2">
+       Definizione - Algebra di commutazione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-3">
+       Definizione - Espressione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-4">
+       Definizione - Schema logico
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-5">
+       Definizione - Da espressione a schema logico
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#example4">
+       Esempio - Creare lo schema logico da un'espressione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/sintesi-algebra-di-commutazione.html#def2-6">
+       Definizione - Da espressione a tabella della verità
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/analisi-algebra-di-commutazione.html">
+     Analisi - Algebra di commutazione
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/analisi-algebra-di-commutazione.html#def2-7">
+       Definizione - Da tabella della verità a espressioni
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/analisi-algebra-di-commutazione.html#def2-8">
+       Definizione - Espressione canonica SP (Somma di Prodotti)
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/analisi-algebra-di-commutazione.html#example5">
+       Esempio - Ottenere l'espressione canonica SP da una tabella della verità
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/analisi-algebra-di-commutazione.html#def2-9">
+       Definizione - Espressione canonica PS (Prodotto di somme)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/analisi-algebra-di-commutazione.html#def2-10">
+       Definizione - Notazione simbolica per le espressioni canoniche
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/equivalenze-notevoli.html">
+     Equivalenze notevoli
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/equivalenze-notevoli.html#def2-11">
+       Definizione - Equivalenze notevoli
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/equivalenze-notevoli.html#example6">
+       Esempio - Manipolazione algebrica di espressioni
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/equivalenze-notevoli.html#def2-12">
+       Definizione - Il problema della sintesi
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/reti-di-costo-minimo.html">
+     Reti di costo minimo
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-13">
+       Definizione - Ritardo complessivo di una rete combinatoria
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-14">
+       Definizione - Complessità di una rete combinatoria
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-15">
+       Definizione - Ottenere reti di costo minimo
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-16">
+       Definizione - Implicante e implicante primo
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-17">
+       Definizione - Implicato e implicato primo
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-di-costo-minimo.html#def2-18">
+       Definizione - Espressione minima
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/mappe-di-karnaugh.html">
+     Mappe di Karnaugh
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-19">
+       Definizione - Mappa di Karnaugh
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-20">
+       Definizione - Celle adiacenti su mappe di Karnaugh
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-21">
+       Definizione - Raggruppamento rettangolare
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-22">
+       Definizione - Raggruppamenti rettangolari ed implicanti
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-23">
+       Definizione - Raggruppamenti rettangolari ed implicati
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-24">
+       Definizione - Copertura di una funzione su una mappa
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-25">
+       Definizione - Raggruppamenti e termini ridondanti
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-26">
+       Definizione - Individuare la copertura minima
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#example7">
+       Esempio - Sintesi minima di un encoder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#def2-27">
+       Definizione - Analisi con le mappe di Karnaugh
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/mappe-di-karnaugh.html#example8">
+       Esempio - Analisi con le mappe di Karnaugh
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/algebra-del-nand.html">
+     Algebra del NAND
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/algebra-del-nand.html#def2-28">
+       Definizione - Algebra del NAND
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/algebra-del-nand.html#def2-29">
+       Definizione - Sintesi a NAND
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/algebra-del-nand.html#example9">
+       Esempio - Sintesi a NAND del EXOR
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/algebra-del-nor.html">
+     Algebra del NOR
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/algebra-del-nor.html#def2-30">
+       Definizione - Algebra del NOR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/algebra-del-nor.html#def2-31">
+       Definizione - Sintesi a NOR
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/algebra-del-nor.html#example10">
+       Esempio - Sintesi a NOR del EXNOR
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/decoder-e-multiplexer.html">
+     Decoder e Multiplexer
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-32">
+       Definizione - Circuiti MSI e LSI
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-33">
+       Definizione - Decoder  \( n:2^{n}\)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-34">
+       Definizione - Sintesi del decoder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-35">
+       Definizione - Fan-out in componenti complessi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-36">
+       Definizione - Decoder e OR per la sintesi di ogni espressione SP
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#example11">
+       Esempio - Sintesi del full-adder con decoder e OR
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-37">
+       Definizione - Decoder come circuito integrato
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-38">
+       Definizione - Decoder  \( 4:16\)  - Composizione di decoder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-39">
+       Definizione - Multiplexer a  \( 2\)  vie
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-40">
+       Definizione - Multiplexer generico
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-41">
+       Definizione - Teorema di espansione di Shannon e espressioni generali
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-42">
+       Definizione - Multiplexer come rete programmabile
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#example12">
+       Esempio - Sintesi full-adder con LUT
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/decoder-e-multiplexer.html#def2-43">
+       Definizione - Multiplexer con  \( 4\)  bit di selezione - Composizione di multiplexer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-logiche/reti-programmabili.html">
+     Reti programmabili
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-44">
+       Definizione - Perchè nascono le reti programmabili?
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-45">
+       Definizione - Memoria
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-46">
+       Definizione - Rete combinatoria programmabile
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-47">
+       Definizione - Memorie ROM
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-48">
+       Definizione - Realizzazione di memorie ROM
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-49">
+       Definizione - Descrizione di una ROM
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-logiche/reti-programmabili.html#example13">
+       Esempio - Esercizio ROM - Autovelox
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-logiche/reti-programmabili.html#def2-50">
+       Definizione - Diversi tipi di ROM
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="section-li">
+  <a href="alu/">
+   ALU
+  </a>
+  <ul>
+   <li class="subsection-li">
+    <a href="alu/aritmetica-binaria.html">
+     Aritmetica binaria
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-1">
+       Definizione - Aritmetica binaria tra numeri unsigned
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-2">
+       Definizione - Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-3">
+       Definizione - Half Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-4">
+       Definizione - Full Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-5">
+       Definizione - Adder a  \( n\)  bit
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-6">
+       Definizione - Complemento a  \( \beta - 1\)
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="alu/aritmetica-binaria.html#example14">
+       Esempio - Complemento a  \( 9\)  ( \( \beta - 1\) )
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="alu/aritmetica-binaria.html#example15">
+       Esempio - Complemento a  \( 1\)  ( \( \beta - 1\) )
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-7">
+       Definizione - Complemento a  \( \beta\)
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="alu/aritmetica-binaria.html#example16">
+       Esempio - Complemento a  \( 2\)  ( \( \beta\) )
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-8">
+       Definizione - Sottrazione tra numeri unsigned con Full Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-9">
+       Definizione - Rappresentazione in base  \( 2\)  di numeri con segno
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-10">
+       Definizione - Operazioni tra numeri signed utilizzando Full Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-11">
+       Definizione - Limiti del  \( n\) -bit Adder (ripple-carry Adder)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-12">
+       Definizione - Carry lookahead Adder
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="alu/aritmetica-binaria.html#def3-13">
+       Definizione - Arithmetic Logic Unit (ALU)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="section-li">
+  <a href="reti-sequenziali/">
+   Reti sequenziali
+  </a>
+  <ul>
+   <li class="subsection-li">
+    <a href="reti-sequenziali/stato-di-una-rete-sequenziale.html">
+     Stato di una rete sequenziale
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-sequenziali/stato-di-una-rete-sequenziale.html#def4-1">
+       Definizione - Rete sequenziale
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/stato-di-una-rete-sequenziale.html#def4-2">
+       Definizione - Stato di una rete sequenziale
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-sequenziali/reti-sequenziali-asincrone.html">
+     Reti sequenziali asincrone
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-3">
+       Definizione - Rete sequenziale asincrona (RSA)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-4">
+       Definizione - Memoria in una RSA
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-5">
+       Definizione - Finite State Machine (FSM)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-6">
+       Definizione - Comportamento di una RSA
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-7">
+       Definizione - Grafo degli stati - Automa di Mealy
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-8">
+       Definizione - Grafo degli stati - Automa di Moore
+      </a>
+     </li>
+     <li class="myexample-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#example17">
+       Esempio - Descrivere il comportamento di una RSA con un grafo a stati - Lampada da tavolo
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-9">
+       Definizione - Stato iniziale (o reset)
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-10">
+       Definizione - Tabella di flusso - Automa di Mealy
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-11">
+       Definizione - Tabella di flusso - Automa di Moore
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-12">
+       Definizione - Tabella delle transizioni
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/reti-sequenziali-asincrone.html#def4-13">
+       Definizione - Da tabella delle transizioni a espressioni combinatorie
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-sequenziali/comportamenti-in-transitorio.html">
+     Comportamenti in transitorio
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-sequenziali/comportamenti-in-transitorio.html#def4-14">
+       Definizione - Comportamento a regime e in transitorio
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/comportamenti-in-transitorio.html#def4-15">
+       Definizione - Comportamento in transitorio - Ritardo puro
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/comportamenti-in-transitorio.html#def4-16">
+       Definizione - Comportamento in transitorio - Alea dinamica
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/comportamenti-in-transitorio.html#def4-17">
+       Definizione - Comportamento in transitorio - Alea statica
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="subsection-li">
+    <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html">
+     Vincoli per il corretto funzionamento di una RSA
+    </a>
+    <ul>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-18">
+       Definizione - Funzionamento generale di una RSA
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-19">
+       Definizione - Vincolo di funzionamento di una RSA - Durata degli ingressi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-20">
+       Definizione - Vincolo di funzionamento di una RSA - Codifica degli ingressi
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-21">
+       Definizione - Vincolo di funzionamento di una RSA - Evitare le alee statiche negli anelli di retroazione
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-22">
+       Definizione - Vincolo di funzionamento di una RSA - Codifica degli stati
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-23">
+       Definizione - Grafo delle adiacenze
+      </a>
+     </li>
+     <li class="definition-li">
+      <a href="reti-sequenziali/vincoli-per-il-corretto-funzionamento-di-una-rsa.html#def4-24">
+       Definizione - Corse critiche e non critiche
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+            </div>
+            <nav class="buttons-container content-width">
+                
+                <a class="navigation-button next" href="nozioni-di-base/index.html" rel="nofollow"><span>Nozioni di base</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+.parent-ul {
+  padding: 0;
+}
+
+.index-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.index-container li {
+  list-style-type: none;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.index-container li:hover::before {
+  font-variation-settings: "FILL" 1;
+}
+
+.index-container li a {
+  text-decoration: none;
+  color: var(--sec-fg-clr);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 90%,
+    black 90%,
+    black 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms;
+}
+
+.index-container li a:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+.index-container li::before {
+  display: inline-block;
+  padding-inline-end: 0.75em;
+  vertical-align: middle;
+  font-family: "Material Symbols Outlined";
+  color: initial;
+  transition: transform 200ms;
+}
+
+.section-li {
+  font-weight: 800;
+}
+
+.subsection-li {
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.definition-li,
+.demonstration-li,
+.myexample-li {
+  font-weight: 300;
+  font-size: 0.85em;
+}
+
+.section-li::before {
+  content: "bookmark";
+}
+
+.subsection-li::before {
+  content: "label";
+}
+
+.myexample-li::before {
+  content: "edit";
+}
+
+.demonstration-li::before {
+  content: "square";
+}
+
+.definition-li::before {
+  content: "library_books";
+}

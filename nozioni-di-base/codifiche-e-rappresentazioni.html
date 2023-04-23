@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#ff7f50" />
+    <meta name="keywords" content="reti logiche, reti combinatorie, reti sequenziali" />
+    <meta name="description" content="Il seguente sito contiene gli appunti e le definizioni del corso 'Reti logiche'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Reti logiche - Nozioni di base - Codifiche e rappresentazioni</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Reti logiche
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Nozioni di base
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Codifiche e rappresentazioni</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def1-30">
+ <h2 class="environment-title">
+  Definizione -
+  Informazione
+ </h2>
+ <div class="environment-body">
+  Secondo la "teoria dell'informazione", un'informazione è una stringa, di lunghezza finita, di simboli appartenenti ad un alfabeto.     Tale alfabeto, definisce le informazioni elementari.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Esempi
+   </h3>
+   <div class="environment-body">
+    Esempi di ciò sono:
+    <ul class="list-container">
+     <li class="list-item">
+      l'informazione "testo" composta dall'alfabeto dei "caratteri";
+     </li>
+     <li class="list-item">
+      l'informazione "numero" composta dall'alfabeto delle "cifre";
+     </li>
+     <li class="list-item">
+      l'informazione "immagine" composta dall'alfabeto "valori dei pixel".
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-31">
+ <h2 class="environment-title">
+  Definizione -
+  Codifica binaria dell'informazione
+ </h2>
+ <div class="environment-body">
+  Dato che per i vari motivi elencati in precedenza è comodo lavorare con i segnali binari, risulta utile adottare una codifica binaria (composta da un alfabeto binario) per rappresentare diversi tipi di informazione. Tuttavia, per poter rappresentare più di due informazioni, risulta utile utilizzare delle stringhe di bit.
+ </div>
+</div>
+<div class="definition environment" id="def1-32">
+ <h2 class="environment-title">
+  Definizione -
+  Codice binario
+ </h2>
+ <div class="environment-body">
+  Un codice binario è una funzione che fa corrispondere ad una qualsiasi delle
+  <span class="math-span">
+   \( 2^{n}\)
+  </span>
+  configurazioni di
+  <span class="math-span">
+   \( n\)
+  </span>
+  bit (stringhe di
+  <span class="math-span">
+   \( n\)
+  </span>
+  bit) una delle
+  <span class="math-span">
+   \( M\)
+  </span>
+  informazioni che si vogliono rappresentare.     Affinchè ciò sia sensato, è necessario utilizzare un valore
+  <span class="math-span">
+   \( n\)
+  </span>
+  tale che
+  <span class="math-span">
+   \( 2^{n} \geq M\)
+  </span>
+  .      Seguendo lo stesso ragionamento (ma partendo dal problema inverso), si ha che per rappresentare
+  <span class="math-span">
+   \( M\)
+  </span>
+  valori, si devono utilizzare almeno
+  <span class="math-block">
+   \[         n = \lceil \log_{2} M \rceil     \]
+  </span>
+  dove
+  <span class="math-span">
+   \( \lceil \ldots \rceil\)
+  </span>
+  indica l'intero successivo.
+  <br/>
+  Dato che è una funzione, è possibile che ad una configurazione non corrisponda ad alcuna informazione o che due diverse configurazioni corrispondano alla stessa informazione. Non è tuttavia valido che una stessa configurazione corrisponda a più di una informazione.
+ </div>
+</div>
+<div class="definition environment" id="def1-33">
+ <h2 class="environment-title">
+  Definizione -
+  Condivisione codice binario tra sorgente e destinatario
+ </h2>
+ <div class="environment-body">
+  Un codice binario è una rappresentazione convenzionale: a parità di
+  <span class="math-span">
+   \( n\)
+  </span>
+  bit e
+  <span class="math-span">
+   \( M\)
+  </span>
+  informazioni si hanno
+  <span class="math-span">
+   \( C\)
+  </span>
+  disposizioni senza ripetizione
+  <span class="math-block">
+   \[         C = \frac{2^{n} !}{(2^{n} - M) !}     \]
+  </span>
+  ovvero un numero che cresce molto rapidamente al crescere di
+  <span class="math-span">
+   \( n\)
+  </span>
+  e
+  <span class="math-span">
+   \( M\)
+  </span>
+  .
+  <br/>
+  Per questo motivo è necessario, affinchè sia utile, che il
+  <strong>
+   codice
+  </strong>
+  sia
+  <strong>
+   condiviso tra sorgente e destinazione
+  </strong>
+  .
+ </div>
+</div>
+<div class="definition environment" id="def1-34">
+ <h2 class="environment-title">
+  Definizione -
+  Codici ridondanti e non rinondanti
+ </h2>
+ <div class="environment-body">
+  La teoria combinatoria fornisce un numero minimo di bit da utilizzare, ma non pone alcun limite sul numero massimo (in quanto sarebbero tutti validi).
+  <br/>
+  Quindi, dato un numero minimo di bit per rappresentare
+  <span class="math-span">
+   \( M\)
+  </span>
+  informazioni, calcolabile come
+  <span class="math-block">
+   \[         n_{min} = \lceil \log_{2} M \rceil     \]
+  </span>
+  un codice si definisce
+  <ul class="list-container">
+   <li class="list-item">
+    "
+    <strong>
+     ridondante
+    </strong>
+    " un codice che utilizza un numero di bit
+    <span class="math-span">
+     \( n\)
+    </span>
+    maggiore di
+    <span class="math-span">
+     \( n_{min}\)
+    </span>
+    ;
+   </li>
+   <li class="list-item">
+    "
+    <strong>
+     non ridondante
+    </strong>
+    " un codice che utilizza un numero di bit
+    <span class="math-span">
+     \( n\)
+    </span>
+    uguale a
+    <span class="math-span">
+     \( n_{min}\)
+    </span>
+    .
+   </li>
+  </ul>
+  Per quanto sia una scelta inefficiente utilizzare codici non ridondanti, ciò non significa che sia una scelta sbagliata:     può essere infatti utile per rendere più robusta l'infrastruttura o per comunicare più facilmente con l'essere umano.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Esempi di codici ridondanti
+   </h3>
+   <div class="environment-body">
+    Un esempio di codice ridondante molto utilizzato è il codice a sette segmenti (dal nome del display), dove per rappresentare
+    <span class="math-span">
+     \( 10\)
+    </span>
+    informazioni (ovvero le cifre da
+    <span class="math-span">
+     \( 0\)
+    </span>
+    a
+    <span class="math-span">
+     \( 9\)
+    </span>
+    ), utilizza
+    <span class="math-span">
+     \( 7\)
+    </span>
+    bit (che indicano quale "segmento" accendere al fine di visualizzare tale cifra).
+    <br/>
+    Altro esempio diffusissimo è il codice a barre ("
+    <i>
+     Universal Product Code
+    </i>
+    ") che grazie alla sua ridondanza rende possibile la lettura tramite un sensore.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-35">
+ <h2 class="environment-title">
+  Definizione -
+  Rappresentazione dei numeri senza segno
+ </h2>
+ <div class="environment-body">
+  A differenza della consuetudine umana che rappresenta i numeri tramite un sistema di numerazione posizionale (dove ogni cifra assume un valore differente in base alla sua posizione) in base
+  <span class="math-span">
+   \( 10\)
+  </span>
+  , le macchine digitali utilizzano internamente un sistema posizionale in base
+  <span class="math-span">
+   \( 2\)
+  </span>
+  .
+  <br/>
+  In alcuni casi, risulta però utile utilizzare sistemi in base
+  <span class="math-span">
+   \( \gt  10\)
+  </span>
+  , dove, oltre alle dieci cifre tradizionali, si usano anche dei caratteri (ad esempio nel sistema esadecimale, in base
+  <span class="math-span">
+   \( 16\)
+  </span>
+  , utilizzato per rappresentare in maniera compatta gli indirizzi di memoria).
+ </div>
+</div>
+<div class="definition environment" id="def1-36">
+ <h2 class="environment-title">
+  Definizione -
+  Valore di un numero in base
+  <span class="math-span">
+   \( B\)
+  </span>
+ </h2>
+ <div class="environment-body">
+  Considerando un numero rappresentato in sistema posizionale in base
+  <span class="math-span">
+   \( B\)
+  </span>
+  , per ottenere il valore di tale numero risulta utile effettuare l'espansione polinomiale dove ad ogni cifra si assegna un valore in base alla sua posizione (
+  <span class="math-span">
+   \( B^{pos}\)
+  </span>
+  ), ovvero:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-7.png"/>
+   </div>
+  </div>
+  per poi andare a sommare ogni singola cifra moltiplicata per il suo peso.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Rappresentazione del valore di un numero
+   </h3>
+   <div class="environment-body">
+    È necessario notare che il valore di un numero è un concetto astratto: esso non corrisponde univocamente alla rappresentazione decimale. Nonostante ciò, proprio perchè per la consuetudine umana di utilizzare il sistema posizionale in base
+    <span class="math-span">
+     \( 10\)
+    </span>
+    , ci risulta gratuita questa rappresentazione.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="myexample environment" id="example1">
+ <h2 class="environment-title">
+  Esempio -
+  Valore di un numero in base
+  <span class="math-span">
+   \( 2\)
+  </span>
+ </h2>
+ <div class="environment-body">
+  Si vuole calcolare il valore numero
+  <span class="math-span">
+   \( 10110,0101)_{2}\)
+  </span>
+  :
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-8.png"/>
+   </div>
+  </div>
+  e andando a sommare ogni valore si ottiene
+  <span class="math-block">
+   \[     10110,0101)_{2} = 16 + 4 + 2 + 0,25 + 0,0625 = 22,3125 \]
+  </span>
+  che, per come abbiamo ragionato, coincide con la rappresentazione in base
+  <span class="math-span">
+   \( 10\)
+  </span>
+  .
+ </div>
+</div>
+<div class="definition environment" id="def1-37">
+ <h2 class="environment-title">
+  Definizione -
+  Rappresentazione di un numero in base
+  <span class="math-span">
+   \( B\)
+  </span>
+  (Conversione iterativa)
+ </h2>
+ <div class="environment-body">
+  Considerando un qualsiasi valore (rappresentato convenzionalmente in base
+  <span class="math-span">
+   \( 10\)
+  </span>
+  ), per rappresentarlo in una base
+  <span class="math-span">
+   \( B\)
+  </span>
+  può essere utile ricorrere all'algoritmo di conversione iterativa.     Per farlo si separano la parte intera e la parte frazionaria.
+  <br/>
+  Considerando quindi la parte intera, si effettua la divisione intera per
+  <span class="math-span">
+   \( B\)
+  </span>
+  (ovvero
+  <span class="math-span">
+   \( \frac{valore}{B}\)
+  </span>
+  ) e si considera anche il resto di tale divisione. Tale resto sarà considerata la cifra nella
+  <span class="math-span">
+   \( i\)
+  </span>
+  -esima posizione, dove
+  <span class="math-span">
+   \( i\)
+  </span>
+  inizia da
+  <span class="math-span">
+   \( 0\)
+  </span>
+  e indica il numero di divisioni. Si considera tale processo terminato quando il valore del quoziente sarà
+  <span class="math-span">
+   \( 0\)
+  </span>
+  (si potrebbe anche continuare ma ciò porterebbe ad un numero infinito di '
+  <span class="math-span">
+   \( 0\)
+  </span>
+  ' con valore
+  <span class="math-span">
+   \( 0\)
+  </span>
+  , posti alla sinistra del numero).
+  <br/>
+  Per la parte frazionaria si moltiplica invece per
+  <span class="math-span">
+   \( B\)
+  </span>
+  . Il risultato si separa poi in parte intera e in parte frazionaria. Il valore della parte intera sarà la cifra in
+  <span class="math-span">
+   \( (-j)\)
+  </span>
+  -esima posizione, dove
+  <span class="math-span">
+   \( j\)
+  </span>
+  inizia da
+  <span class="math-span">
+   \( 1\)
+  </span>
+  e indica il numero di moltiplicazioni. Si considera tale processo terminato se il risultato frazionario è uguale a
+  <span class="math-span">
+   \( 0\)
+  </span>
+  (o si è raggiunto il numero di cifre significative richieste).
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Parte frazionaria infinita
+   </h3>
+   <div class="environment-body">
+    È possibile che non si ottenga mai
+    <span class="math-span">
+     \( 0\)
+    </span>
+    come risultato della parte frazionaria, in quanto è possibile che un numero razionale non ammetta una rappresentazione finita rispetto ad una certa base.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="myexample environment" id="example2">
+ <h2 class="environment-title">
+  Esempio -
+  Rappresentazione di un numero in base
+  <span class="math-span">
+   \( 2\)
+  </span>
+ </h2>
+ <div class="environment-body">
+  Si vuole rappresentare il valore del numero
+  <span class="math-span">
+   \( 41,6875)_{10}\)
+  </span>
+  in base
+  <span class="math-span">
+   \( 2\)
+  </span>
+  .
+  <br/>
+  Separiamo quindi tale numero in due parti:
+  <span class="math-span">
+   \( 41\)
+  </span>
+  sarà la parte intera e
+  <span class="math-span">
+   \( 0,6875\)
+  </span>
+  la parte frazionaria.
+  <br/>
+  La stringa che rappresenterà il valore
+  <span class="math-span">
+   \( 41\)
+  </span>
+  sarà:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-9.png"/>
+   </div>
+  </div>
+  da cui si ottiene
+  <span class="math-span">
+   \( 41)_{10} = 101001)_{2}\)
+  </span>
+  .
+  <br/>
+  Il valore
+  <span class="math-span">
+   \( 0,6875\)
+  </span>
+  sarà invece rappresentato come
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-10.png"/>
+   </div>
+  </div>
+  da cui si ottiene
+  <span class="math-span">
+   \( 0,6875)_{10} = 0,1011)_{2}\)
+  </span>
+  .
+  <br/>
+  Unendo i due risultati si ottiene che
+  <span class="math-block">
+   \[     41,6875)_{10} = 101001,1011)_{2} \]
+  </span>
+ </div>
+</div>
+<div class="definition environment" id="def1-38">
+ <h2 class="environment-title">
+  Definizione -
+  Conversione da una base ad un'altra
+ </h2>
+ <div class="environment-body">
+  Considerando quindi due qualsiasi basi
+  <span class="math-span">
+   \( B_{1}\)
+  </span>
+  e
+  <span class="math-span">
+   \( B_{2}\)
+  </span>
+  , è possibile passare da una rappresentazione all'altra utilizzando come "base franca" la base
+  <span class="math-span">
+   \( 10\)
+  </span>
+  (che risulta più comoda in quanto noi esseri umani ragioniamo in base
+  <span class="math-span">
+   \( 10\)
+  </span>
+  ).
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Corrispondenze tra base
+    <span class="math-span">
+     \( 2\)
+    </span>
+    e base
+    <span class="math-span">
+     \( 16\)
+    </span>
+   </h3>
+   <div class="environment-body">
+    Tra la base
+    <span class="math-span">
+     \( 2\)
+    </span>
+    e la base
+    <span class="math-span">
+     \( 16\)
+    </span>
+    esiste una corrispondenza diretta: infatti è sufficiente sostituire singolarmente il valore di ogni cifra esadecimale con il valore dei rispettivi
+    <span class="math-span">
+     \( 4\)
+    </span>
+    bit binari.
+    <br/>
+    Ad esempio, per trasformare il numero esadecimale
+    <span class="math-span">
+     \( F3)_{16}\)
+    </span>
+    è sufficiente fare
+    <div class="image-environment">
+     <div class="image-wrapper">
+      <img alt="Immagine" src="../resources/generated-11.png"/>
+     </div>
+    </div>
+    (in quanto
+    <span class="math-span">
+     \( F)_{16}\)
+    </span>
+    corrisponde a
+    <span class="math-span">
+     \( 15)_{10}\)
+    </span>
+    ). Ciò rende molto più agevole la conversione tra queste due basi.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-39">
+ <h2 class="environment-title">
+  Definizione -
+  Codice BCD
+ </h2>
+ <div class="environment-body">
+  Il
+  <strong>
+   codice BCD
+  </strong>
+  ("
+  <i>
+   Binary Coded Decimal
+  </i>
+  ") è un codice a lunghezza fissa di
+  <span class="math-span">
+   \( 4\)
+  </span>
+  bit utile per rappresentare le prime
+  <span class="math-span">
+   \( 10\)
+  </span>
+  cifre decimali quando è necessario interfacciarsi con l'utente.     Tale codice, infatti, fa corrispondere le prime
+  <span class="math-span">
+   \( 10\)
+  </span>
+  cifre a quelle del sistema di numerazione posizionale in base
+  <span class="math-span">
+   \( 2\)
+  </span>
+  ma, per numeri di più cifre, converte ogni singola cifra in
+  <span class="math-span">
+   \( 4\)
+  </span>
+  bit. Non è quindi efficiente per quanto riguarda l'occupazione della memoria.
+  <br/>
+  Ad esempio, il numero
+  <span class="math-span">
+   \( 329\)
+  </span>
+  sarà rappresentato come:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-12.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-40">
+ <h2 class="environment-title">
+  Definizione -
+  Codice di Gray
+ </h2>
+ <div class="environment-body">
+  Il codice di Gray (dal nome del suo creatore) è un codice a lunghezza fissa che ha diverse utilità (tra cui la codifica della posizione nella realtà).     Tale codice introduce infatti che ogni numero e il suo successivo differiscano di un solo bit (che nel caso della posizione potrebbe essere influenzata dal disallineamento di una fotocellula, ad esempio).
+ </div>
+</div>
+<div class="definition environment" id="def1-41">
+ <h2 class="environment-title">
+  Definizione -
+  Codici interni ed esterni
+ </h2>
+ <div class="environment-body">
+  È comune che una macchina digitale applichi più volte un processo di trascodifica tra codice interno e codici esterni:
+  <ul class="list-container">
+   <li class="list-item">
+    un
+    <strong>
+     codice interno
+    </strong>
+    è la codifica utilizzata dall'unità di elaborazione per rappresentare internamente le informazioni. Per questo motivo è solitamente non ridondante per rendere i processi interni più efficienti;
+   </li>
+   <li class="list-item">
+    un
+    <strong>
+     codice esterno
+    </strong>
+    è la codifica utilizzata dalla macchina per interfacciarsi con l'utente e altre macchine. Per questo motivo è solitamente ridondante (per semplificare la generazione e l'interpretazione) e standard (per rendere possibile la connessione tra macchine).
+   </li>
+  </ul>
+  Accanto a questi concetti esistono anche quelli di:
+  <ul class="list-container">
+   <li class="list-item">
+    <strong>
+     codice proprietario
+    </strong>
+    , ovvero un codice scelto da un costruttore comune a macchine di sua produzione. Il motivo di utilizzare un codice di questo tipo può essere quello di ottimizzare le prestazioni o proteggere il mercato;
+   </li>
+   <li class="list-item">
+    <strong>
+     codice standard
+    </strong>
+    , ovvero un codice comune a macchine di diversi costruttori. Tale codice può essere stato scelto da norme internazionali ("
+    <strong>
+     de iure
+    </strong>
+    ") o dal fatto che sia utilizzato ampiamente sul mercato ("
+    <strong>
+     de facto
+    </strong>
+    ").
+   </li>
+  </ul>
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Codici utilizzati in una calcolatrice
+   </h3>
+   <div class="environment-body">
+    Per evidenziare la convivenza di diversi codici nella stessa macchina digitale, si può considerare come esempio la calcolatrice tascabile. Essa implementa infatti:
+    <ul class="list-container">
+     <li class="list-item">
+      un codice a sette segmenti per visualizzare i dati;
+     </li>
+     <li class="list-item">
+      un codice
+      <span class="math-span">
+       \( 1\)
+      </span>
+      su
+      <span class="math-span">
+       \( N\)
+      </span>
+      per i pulsanti (ad ogni pulsanti corrisponde una sola informazione);
+     </li>
+     <li class="list-item">
+      un codice per la rappresentazione interna dei numeri.
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-42">
+ <h2 class="environment-title">
+  Definizione -
+  Rappresentazione dei caratteri (ASCII)
+ </h2>
+ <div class="environment-body">
+  Inizialmente progettato per la comunicazione a distanza di telescriventi, il codice ASCII ("
+  <i>
+   American Standard Code for Information Interchange
+  </i>
+  ") è stato il primo standard "de iure" per la codifica binaria dei caratteri.     Inizialmente era codificato su
+  <span class="math-span">
+   \( 7\)
+  </span>
+  bit (poteva quindi rappresentare
+  <span class="math-span">
+   \( 128\)
+  </span>
+  simboli) ed era composto da:
+  <ul class="list-container">
+   <li class="list-item">
+    33 caratteri di controllo (i primi 32 posti all'inizio, il 33esimo posto all'ultimo posto (DEL)), molti utilizzati per la retrocompatibilità;
+   </li>
+   <li class="list-item">
+    diversi simboli;
+   </li>
+   <li class="list-item">
+    le cifre decimali (poste dal codice
+    <span class="math-span">
+     \( 48\)
+    </span>
+    in poi);
+   </li>
+   <li class="list-item">
+    le lettere dell'alfabeto maiuscole (poste dal codice
+    <span class="math-span">
+     \( 65\)
+    </span>
+    in poi);
+   </li>
+   <li class="list-item">
+    le lettere dell'alfabeto minuscole (poste dal codice
+    <span class="math-span">
+     \( 97\)
+    </span>
+    in poi, esattamente
+    <span class="math-span">
+     \( 32\)
+    </span>
+    codici dopo).
+   </li>
+  </ul>
+  Sono mancanti numerosissimi caratteri e, per questo motivo, nacquero un infinità di codici ASCII estesi a
+  <span class="math-span">
+   \( 8\)
+  </span>
+  bit che inserivano, ognuno in modo differente, i caratteri mancanti.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Fun fact - DEL
+   </h3>
+   <div class="environment-body">
+    Il carattere DEL deve la sua posizione ai tempi della programmazione su schede forate.          Poteva capitare di "forare" una riga (corrispondente ad un'istruzione) incorrettamente e per far capire l'errore all'interprete di tali schede, l'unico modo era forare tutta la riga. Da questo deriva il fatto che il DEL sia rappresentato da tutti
+    <span class="math-span">
+     \( 1\)
+    </span>
+    .
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def1-43">
+ <h2 class="environment-title">
+  Definizione -
+  Rappresentazione dei caratteri (UNICODE)
+ </h2>
+ <div class="environment-body">
+  Lo standard UNICODE risolse questo problema arrivando a rappresentare ogni carattere con
+  <span class="math-span">
+   \( 21\)
+  </span>
+  bit.      Per rendere più efficiente la memorizzazione e l'elaborazione di questi caratteri (in quanto le architetture sono ottimizzate per operare su gruppi di byte (
+  <span class="math-span">
+   \( 8\)
+  </span>
+  bit)) sono quindi stati definiti tre standard, detti UTF ("Unicode Transformation Format"):
+  <ul class="list-container">
+   <li class="list-item">
+    l'UTF-32, che per codificare i
+    <span class="math-span">
+     \( 21\)
+    </span>
+    bit aggiunge semplicemente
+    <span class="math-span">
+     \( 11\)
+    </span>
+    bit '
+    <span class="math-span">
+     \( 0\)
+    </span>
+    ' a sinistra;
+   </li>
+   <li class="list-item">
+    l'UTF-16, che usa di default
+    <span class="math-span">
+     \( 2\)
+    </span>
+    byte per codificare i caratteri più comuni, mentre ne usa
+    <span class="math-span">
+     \( 4\)
+    </span>
+    per i restanti caratteri;
+   </li>
+   <li class="list-item">
+    l'UTF-8, che usa
+    <span class="math-span">
+     \( 1\)
+    </span>
+    byte per rappresentare i
+    <span class="math-span">
+     \( 128\)
+    </span>
+    caratteri ASCII e
+    <span class="math-span">
+     \( 2\)
+    </span>
+    ,
+    <span class="math-span">
+     \( 3\)
+    </span>
+    o
+    <span class="math-span">
+     \( 4\)
+    </span>
+    byte per i restanti.
+   </li>
+  </ul>
+  Si ha quindi che UTF-32 è un codice a lunghezza fissa, mentre UTF-16 e UTF-8 sono codici a lunghezza variabile.
+ </div>
+</div>
+<div class="definition environment" id="def1-44">
+ <h2 class="environment-title">
+  Definizione -
+  Ottenere dal codice UNICODE la codifica UTF-8
+ </h2>
+ <div class="environment-body">
+  Per ottenere la codifica UTF-8 dal codice UNICODE si applica un particolare algoritmo:
+  <ul class="list-container">
+   <li class="list-item">
+    innanzitutto, dato il codice UNICODE (codificato solitamente in esadecimale), lo si trasforma in binario.
+   </li>
+   <li class="list-item">
+    a questo punto è necessario ottenere il numero di bit significativi del numero: per farlo è sufficiente trovare la posizione del bit a
+    <span class="math-span">
+     \( 1\)
+    </span>
+    più "significativo";
+   </li>
+   <li class="list-item">
+    in base al risultato si utilizzerà un numero di byte differente:
+    <ul class="list-container">
+     <li class="list-item">
+      se sono meno di
+      <span class="math-span">
+       \( 7\)
+      </span>
+      (
+      <span class="math-span">
+       \( \leq 7\)
+      </span>
+      ) (ovvero fino al codice
+      <span class="math-span">
+       \( 127)_{10}\)
+      </span>
+      ) si utilizzerà un solo byte;
+     </li>
+     <li class="list-item">
+      se sono compresi tra
+      <span class="math-span">
+       \( 7\)
+      </span>
+      e
+      <span class="math-span">
+       \( 10\)
+      </span>
+      (ovvero fino al codice
+      <span class="math-span">
+       \( 2047)_{10}\)
+      </span>
+      ) si utilizzeranno due byte;
+     </li>
+     <li class="list-item">
+      se sono compresi tra
+      <span class="math-span">
+       \( 11\)
+      </span>
+      e
+      <span class="math-span">
+       \( 15\)
+      </span>
+      (ovvero fino al codice
+      <span class="math-span">
+       \( 65535)_{10}\)
+      </span>
+      ) si utilizzeranno tre byte;
+     </li>
+     <li class="list-item">
+      se sono più di
+      <span class="math-span">
+       \( 15\)
+      </span>
+      (
+      <span class="math-span">
+       \( \geq 16\)
+      </span>
+      ) (ovvero dal codice
+      <span class="math-span">
+       \( 65535)_{10}\)
+      </span>
+      in poi) si utilizzeranno quattro byte;
+     </li>
+    </ul>
+   </li>
+   <li class="list-item">
+    una volta ottenuto tale valore, si ha che:
+    <ul class="list-container">
+     <li class="list-item">
+      se si deve utilizzare un solo byte, si completano i bit ottenuti con degli '
+      <span class="math-span">
+       \( 0\)
+      </span>
+      ' fino ad ottenere un byte completo;
+     </li>
+     <li class="list-item">
+      se si hanno più byte si procede con il seguente algoritmo: si prendono i sei bit meno significativi e gli si aggiunge la coppia
+      <span class="math-span">
+       \( 10\)
+      </span>
+      come bit più significativi dell'ottetto.              Si ripete tale procedimento fino a che non terminano i bit disponibili andando ad aggiungere i byte ottenuti in posizioni sempre più significative.             A questo punto si completa l'ultimo ottetto ottenuto con una stringa di bit che inizia con tanti '
+      <span class="math-span">
+       \( 1\)
+      </span>
+      ' quanti sono i byte, mentre gli altri si impostano a '
+      <span class="math-span">
+       \( 0\)
+      </span>
+      '
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+</div>
+<div class="myexample environment" id="example3">
+ <h2 class="environment-title">
+  Esempio -
+  Da codice UNICODE a codifica UTF-8
+ </h2>
+ <div class="environment-body">
+  Consideriamo il carattere '€', il cui codice UNICODE è '000020AC' che equivale al valore '8364'. Trasformandolo in binario si ottiene
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/generated-13.png"/>
+   </div>
+  </div>
+  e contando il numero di bit significativi si ha
+  <span class="math-span">
+   \( 12\)
+  </span>
+  , ovvero saranno necessari tre byte.
+  <br/>
+  Consideriamo quindi la stringa di bit ottenuta
+  <div class="center environment">
+   <div class="environment-body">
+    00000000 00000000 00100000 10101100
+   </div>
+  </div>
+  e "prendiamo" i sei bit meno significativi (a cui aggiungiamo i due bit fissi)
+  <div class="center environment">
+   <div class="environment-body">
+    <strong>
+     10
+    </strong>
+    10 1100
+   </div>
+  </div>
+  A questo punto, la stringa di bit originale sarà
+  <div class="center environment">
+   <div class="environment-body">
+    00000000 00000000 00100000 10
+    101100
+   </div>
+  </div>
+  e iterando il procedimento si ottiene (sempre aggiungendo i due bit fissi)
+  <div class="center environment">
+   <div class="environment-body">
+    <strong>
+     10
+    </strong>
+    00 0010
+   </div>
+  </div>
+  e
+  <div class="center environment">
+   <div class="environment-body">
+    00000000 00000000 0010
+    0000
+    10101100
+   </div>
+  </div>
+  Si può ora notare che rimangono solo due bit significativi e che siamo giunti al terzo byte: aggiungiamo quindi la stringa di bit '
+  1110 00
+  ' ai due bit rimanenti, andando ad ottenere
+  <div class="center environment">
+   <div class="environment-body">
+    <strong>
+     1110 00
+    </strong>
+    10
+   </div>
+  </div>
+  Terminiamo quindi assemblando i tre byte ottenuti, ovvero
+  <div class="center environment">
+   <div class="environment-body">
+    <strong>
+     1010 1100 1000 0010 1000 0010
+    </strong>
+   </div>
+  </div>
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="gate-e-reti-logiche.html" rel="nofollow"><span>Gate e reti logiche</span></a>
+                <a class="navigation-button next" href="../reti-logiche/index.html" rel="nofollow"><span>Reti logiche</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

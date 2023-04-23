@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#ff7f50" />
+    <meta name="keywords" content="reti logiche, reti combinatorie, reti sequenziali" />
+    <meta name="description" content="Il seguente sito contiene gli appunti e le definizioni del corso 'Reti logiche'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Reti logiche - Reti sequenziali - Stato di una rete sequenziale</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Reti logiche
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Reti sequenziali
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Stato di una rete sequenziale</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def4-1">
+ <h2 class="environment-title">
+  Definizione -
+  Rete sequenziale
+ </h2>
+ <div class="environment-body">
+  Una rete sequenziale è una rete logica in cui ad una stessa configurazione binaria corrispondono uscite diverse.
+ </div>
+</div>
+<div class="definition environment" id="def4-2">
+ <h2 class="environment-title">
+  Definizione -
+  Stato di una rete sequenziale
+ </h2>
+ <div class="environment-body">
+  Dato che l'uscita non dipende solo dagli ingressi, è necessario tener conto di un'altra informazione: lo "stato interno".     Ogni volta che cambiano gli ingressi, la rete, oltre a determinare il valore dell'uscita, dovrà anche "scegliere" se influenzare il suo stato interno (e, in questo caso, modificarlo).
+  <br/>
+  La rete calcola quindi lo "stato futuro" e lo sovrascrive allo "stato presente".
+  <br/>
+  Per tenere traccia di questa informazione, è necessario utilizzare una memoria.
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="index.html" rel="nofollow"><span>Reti sequenziali</span></a>
+                <a class="navigation-button next" href="reti-sequenziali-asincrone.html" rel="nofollow"><span>Reti sequenziali asincrone</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
