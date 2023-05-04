@@ -125,7 +125,11 @@
  <div class="environment-body">
   Dato che i bit di stato presente risultano essere a tutti gli effetti degli ingressi per la rete, è necessario adottare vincoli simili a quelli adottati per le configurazioni di ingresso.
   <br/>
-  Sarebbe necessario infatti che le configurazioni binarie associate ad ogni coppia (stato presente, stato futuro) devono essere adiacenti (ovvero devono variare di massimo un bit). Non è tuttavia sempre necessario adottare tale accorgimento (anche perchè sarebbe eccessivamente esoso in termini di bit utilizzati) ma solo per evitare le cosiddette "corse critiche".
+  Sarebbe necessario infatti che le configurazioni binarie associate ad ogni coppia
+  <i>
+   (stato presente, stato futuro)
+  </i>
+  devono essere adiacenti (ovvero devono variare di massimo un bit). Non è tuttavia sempre necessario adottare tale accorgimento (anche perchè sarebbe eccessivamente esoso in termini di bit utilizzati) ma solo per evitare le cosiddette "corse critiche".
  </div>
 </div>
 <div class="definition environment" id="def4-23">
@@ -339,7 +343,7 @@
     nel caso esistano "celle vuote" nel grafo delle adiacenze, è possibile sfruttarle per realizzare transizioni multiple;
    </li>
    <li class="list-item">
-    si verifica che le corse presenti siano "critiche", la codifica è corretta, altrimenti si cerca di modificare la tabella di flusso sfruttando la stessa colonna del "collegamento" che crea problemi: nel caso nella stessa colonna esiste uno stato che porta allo stato futuro desiderato (con gli stessi ingressi dato che ci stiamo concentrando nella stessa colonna) si cerca di passare per questo stato. Ad esempio, ipotizzando di avere la seguente tabella di flusso:
+    si verifica che le corse presenti siano "critiche", nel caso non lo siano la codifica è corretta, altrimenti si cerca di modificare la tabella di flusso sfruttando la stessa colonna del "collegamento" che crea problemi: nel caso nella stessa colonna esiste uno stato che porta allo stato futuro desiderato (con gli stessi ingressi dato che ci stiamo concentrando nella stessa colonna) si cerca di passare per questo stato. Ad esempio, ipotizzando di avere la seguente tabella di flusso:
     <div class="image-environment">
      <div class="image-wrapper">
       <img alt="Immagine" src="../resources/generated-87.png"/>
@@ -395,7 +399,7 @@
             </article>
             <nav class="buttons-container content-width">
                 <a class="navigation-button previous" href="comportamenti-in-transitorio.html" rel="nofollow"><span>Comportamenti in transitorio</span></a>
-                
+                <a class="navigation-button next" href="analisi-di-una-rsa.html" rel="nofollow"><span>Analisi di una RSA</span></a>
             </nav>
         </section>
         <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
