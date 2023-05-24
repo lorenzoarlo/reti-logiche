@@ -543,10 +543,144 @@
   </ul>
  </div>
 </div>
+<div class="myexample environment" id="example22">
+ <h2 class="environment-title">
+  Esempio -
+  Sintesi diretta - Riconoscitore di sequenze con shift register
+ </h2>
+ <div class="environment-body">
+  Progettare una rete sequenziale sincrona che controlla se gli ultimi tre byte inseriti nell'ingresso
+  <span class="math-span">
+   \( IN[7, \ldots, 0]\)
+  </span>
+  mentre il segnale
+  <span class="math-span">
+   \( EN = 1\)
+  </span>
+  sono stati
+  <span class="math-span">
+   \( FF)_{16}\)
+  </span>
+  ,
+  <span class="math-span">
+   \( 27)_{16}\)
+  </span>
+  e
+  <span class="math-span">
+   \( 30)_{16}\)
+  </span>
+  (dove
+  <span class="math-span">
+   \( FF)_{16}\)
+  </span>
+  è il primo byte della sequenza).
+  <br/>
+  Nel caso la sequenza sia rispettata, nel periodo di clock successivo l'uscita
+  <span class="math-span">
+   \( OUT\)
+  </span>
+  deve essere portata a
+  <span class="math-span">
+   \( 1\)
+  </span>
+  e rimanere tale fino a che l'ingresso asincrono
+  <span class="math-span">
+   \( A\_RESET\)
+  </span>
+  non è uguale a
+  <span class="math-span">
+   \( 1\)
+  </span>
+  : da quel momento la rete deve considerare che non fosse stato inserito alcun byte.
+  <br/>
+  Innanzitutto la rete è di Moore in quanto deve rispondere al clock successivo all'ultimo inserimento nella sequenza.
+  <br/>
+  Un modo (inefficiente) per riconoscere sequenze secondo Moore è porre degli Shift Register in serie per creare una coda che permetta di controllare ad ogni ciclo di clock se la sequenza è stata rispettata.
+  <br/>
+  Dato che in ingresso si hanno
+  <span class="math-span">
+   \( 8\)
+  </span>
+  bit ad ogni ciclo di clock, è necessario utilizzare
+  <span class="math-span">
+   \( 8\)
+  </span>
+  shift register da
+  <span class="math-span">
+   \( 3\)
+  </span>
+  bit in serie. In questo modo si avrà che:
+  <ul class="list-container">
+   <li class="list-item">
+    all'uscita
+    <span class="math-span">
+     \( OUT[2]\)
+    </span>
+    di ogni registro si hanno tutti i bit inseriti
+    <span class="math-span">
+     \( 3\)
+    </span>
+    cicli di clock fa;
+   </li>
+   <li class="list-item">
+    all'uscita
+    <span class="math-span">
+     \( OUT[1]\)
+    </span>
+    di ogni registro si hanno tutti i bit inseriti
+    <span class="math-span">
+     \( 2\)
+    </span>
+    cicli di clock fa;
+   </li>
+   <li class="list-item">
+    all'uscita
+    <span class="math-span">
+     \( OUT[0]\)
+    </span>
+    di ogni registro si hanno tutti i bit inseriti
+    <span class="math-span">
+     \( 1\)
+    </span>
+    ciclo di clock fa;
+   </li>
+  </ul>
+  In questo modo si potranno utilizzare delle reti combinatorie per confrontare i diversi byte.
+  <br/>
+  Pensando ora al mantenimento dell'ingresso, si può lavorare utilizzando l'ingresso
+  <span class="math-span">
+   \( EN\_SHIFT\)
+  </span>
+  per decidere quando abilitare lo shift register.
+  <span class="math-span">
+   \( EN\_SHIFT\)
+  </span>
+  deve essere abilitato quando
+  <span class="math-span">
+   \( EN=1\)
+  </span>
+  e
+  <span class="math-span">
+   \( OUT=0\)
+  </span>
+  . Si avrà quindi la seguente rete:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/riconosci-sequenze-shift-register.png"/>
+   </div>
+  </div>
+  Questa soluzione utilizza però un numero troppo elevato di componenti. È infatti sufficiente memorizzare solo se il byte è quello desiderato e per farlo conviene controllare inizialmente se il numero è quello corretto e memorizzarlo come singolo bit. Si avrà quindi la seguente rete:
+  <div class="image-environment">
+   <div class="image-wrapper">
+    <img alt="Immagine" src="../resources/riconosci-sequenze-shift-register-better.png"/>
+   </div>
+  </div>
+ </div>
+</div>
             </article>
             <nav class="buttons-container content-width">
                 <a class="navigation-button previous" href="registri.html" rel="nofollow"><span>Registri</span></a>
-                
+                <a class="navigation-button next" href="monoimpulsore.html" rel="nofollow"><span>Monoimpulsore</span></a>
             </nav>
         </section>
         <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
