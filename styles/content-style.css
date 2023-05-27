@@ -1,100 +1,163 @@
 :root {
-    --definition-bg: #eaf4d3;
-    --demonstration-bg: #ff836080;
-    --myexample-bg: #b3b3b3;
-    --mynote-bg: #bfb48f;
+  --definition-bg: #eaf4d3;
+  --demonstration-bg: #ff836080;
+  --myexample-bg: #b3b3b3;
+  --mynote-bg: #bfb48f;
+  --min-width-img: 7rem;
 }
 
 .content-container {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
 
-    gap: 16px;
+  gap: 16px;
 }
 
-
 .environment {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
 
-    border-radius: 24px;
-    padding: 24px;
-    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
-    margin-block: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+  margin-block: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
 .environment-title {
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: start;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: start;
 }
 
 .environment-body {
-    font-size: 0.8rem;
-    text-align: justify;
+  font-size: 0.8rem;
+  text-align: justify;
 }
 
 .definition {
-    background-color: var(--definition-bg);
+  background-color: var(--definition-bg);
 }
 
 .demonstration {
-    background-color: var(--demonstration-bg);
+  background-color: var(--demonstration-bg);
 }
 
 .myexample {
-    background-color: var(--myexample-bg);
+  background-color: var(--myexample-bg);
 }
 
 .mynote {
-    background-color: var(--mynote-bg);
+  background-color: var(--mynote-bg);
 }
 
 .list-container {
-    margin-block: 6px;
+  margin-block: 6px;
 }
 
-.image-environment, .image-wrapper {
-    margin-block: 6px;
-    display: grid;
-    place-items: center center;
-    
+.image-environment,
+.image-wrapper {
+  margin-block: 6px;
+  display: grid;
+  place-items: center center;
 }
 
-.image-environment .image-wrapper {
-    max-width: min(50%, 300px);
+.image-wrapper.spaced-15 {
+  /* max-width: max(15%, 15rem); */
+  max-width: max(15%, var(--min-width-img));
+  /* max-width: 15%; */
+}
+.image-wrapper.spaced-20 {
+  /* max-width: max(20%, 15rem); */
+  max-width: max(20%, var(--min-width-img));
+  /* max-width: 15%; */
+}
+.image-wrapper.spaced-25 {
+  /* max-width: max(25%, 15rem); */
+  max-width: max(25%, var(--min-width-img));
+  /* max-width: 25%; */
+}
+.image-wrapper.spaced-30 {
+  /* max-width: max(30%, 15rem); */
+  max-width: max(30%, var(--min-width-img));
+  /* max-width: 30%; */
+}
+.image-wrapper.spaced-35 {
+  /* max-width: max(35%, 15rem); */
+  max-width: max(35%, var(--min-width-img));
+  /* max-width: 35%; */
+}
+.image-wrapper.spaced-40 {
+  /* max-width: max(40%, 15rem); */
+  max-width: max(40%, var(--min-width-img));
+  /* max-width: 40%; */
+}
+.image-wrapper.spaced-50 {
+  /* max-width: max(50%, 15rem); */
+  max-width: max(50%, var(--min-width-img));
+  /* max-width: 50%; */
+}
+.image-wrapper.spaced-60 {
+  /* max-width: max(60%, 15rem); */
+  max-width: max(60%, var(--min-width-img));
+  /* max-width: 60%; */
+}
+.image-wrapper.spaced-70 {
+  /* max-width: max(70%, 15rem); */
+  max-width: max(70%, var(--min-width-img));
+  /* max-width: 70%; */
+}
+.image-wrapper.spaced-75 {
+  /* max-width: max(75%, 15rem); */
+  max-width: max(75%, var(--min-width-img));
+  /* max-width: 75%; */
+}
+.image-wrapper.spaced-80 {
+  /* max-width: max(80%, 15rem); */
+  max-width: max(80%, var(--min-width-img));
+  /* max-width: 80%; */
+}
+
+.image-wrapper.spaced-85 {
+  /* max-width: max(85%, 15rem); */
+  max-width: max(85%, var(--min-width-img));
+  /* max-width: 85%; */
+}
+.image-wrapper.spaced-90 {
+  /* max-width: max(90%, 15rem); */
+  max-width: max(90%, var(--min-width-img));
+  /* max-width: 90%; */
 }
 
 .image-wrapper img {
-    width: 100%;
+  width: 100%;
 }
 
 .hyde {
-    display: none;
+  display: none;
 }
 
 .body-visibility-icon {
-    vertical-align: middle;
-    margin-inline: .5em;
-    user-select: none;
-    cursor: pointer;
+  vertical-align: middle;
+  margin-inline: 0.5em;
+  user-select: none;
+  cursor: pointer;
 
-    transition: background-color 500ms;
-    padding: 4px;
-    border-radius: 50%;
-  }
-  
-  .body-visibility-icon:hover {
-    background-color: rgba(211, 211, 211, 0.5);
-  }
+  transition: background-color 500ms;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.body-visibility-icon:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
 
 .math-block {
-    max-width: 100%;
-    display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
 }

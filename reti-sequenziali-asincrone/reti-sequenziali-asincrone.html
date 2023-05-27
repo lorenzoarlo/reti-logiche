@@ -107,7 +107,7 @@
   <br/>
   Tale ritardo può tuttavia essere visto come una memoria del valore precedente: ciò può essere sfruttato collegando i gate in retroazione.
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-50">
     <img alt="Immagine" src="../resources/circuito-retroazione.png"/>
    </div>
   </div>
@@ -214,8 +214,8 @@
    </li>
   </ul>
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-52.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-49.png"/>
    </div>
   </div>
   Per rendere più comprensibili tali grafi, si utilizza anche una tabella in cui si associano gli identificatori degli stati (
@@ -224,8 +224,8 @@
   </span>
   ) a delle descrizioni, ovvero
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-53.png"/>
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-50.png"/>
    </div>
   </div>
   Un grafo, per essere completo, deve prevedere che da ogni nodo escano tanti rami quante sono le configurazioni binarie possibili degli ingressi.
@@ -260,8 +260,8 @@
  <div class="environment-body">
   Nel caso si stia descrivendo un automa di Moore (ovvero una macchina a stati a finiti in cui la funzione di uscita dipende solo dallo stato presente e non dagli ingressi), il grafo degli stati prevede che in ogni nodo sia riportata anche l'uscita e che non lo sia sopra agli archi, ovvero
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-54.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-51.png"/>
    </div>
   </div>
  </div>
@@ -309,14 +309,14 @@
   </ul>
   Iniziamo quindi considerando lo stato iniziale, ovvero quello in cui la luce è spenta e il pulsante è "in quiete".
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-55.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-52.png"/>
    </div>
   </div>
   In questa situazione, l'unica cosa che è possibile fare è premere il pulsante, andando in un nuovo stato, ovvero
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-56.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-53.png"/>
    </div>
   </div>
   Nello stato "A" si possono quindi verificare due eventi:
@@ -330,8 +330,8 @@
   </ul>
   È possibile quindi descrivere ciò disegnando i seguenti nodi:
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-57.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-54.png"/>
    </div>
   </div>
   A questo punto è possibile che:
@@ -345,42 +345,42 @@
   </ul>
   Nel caso il pulsante venga rilasciato, si verificherebbe un nuovo stato, ovvero
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-58.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-55.png"/>
    </div>
   </div>
   che può essere rappresentato come
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-59.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-56.png"/>
    </div>
   </div>
   Iterando questo processo, si può arrivare ad ottenere la seguente situazione
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-60.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-57.png"/>
    </div>
   </div>
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-61.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-58.png"/>
    </div>
   </div>
   Ma è possibile notare che lo stato "E" e lo stato "A" coincidono, ed è quindi possibile eliminare lo stato "E" ottenendo il seguente diagramma degli stati:
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-62.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-59.png"/>
    </div>
   </div>
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-63.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-60.png"/>
    </div>
   </div>
   Infine, è possibile notare che nei collegamenti "B-C" e "D-A" l'uscita cambia ed è quindi possibile aggiungere un'indifferenza sull'uscita
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-64.png"/>
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-61.png"/>
    </div>
   </div>
  </div>
@@ -409,7 +409,7 @@
   </span>
   lo si collega (con l'ingresso di reset negato) nel seguente modo:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-40">
     <img alt="Immagine" src="../resources/circuito-reset-0.png"/>
    </div>
   </div>
@@ -433,7 +433,7 @@
   </span>
   collegando l'ingresso di reset (questa volta non negato) nel seguente modo:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-40">
     <img alt="Immagine" src="../resources/circuito-reset-1.png"/>
    </div>
   </div>
@@ -454,8 +454,8 @@
  <div class="environment-body">
   In alternativa al grafo degli stati, è possibile descrivere il comportamento di una RSA attraverso una tabella di flusso:
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-65.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-62.png"/>
    </div>
   </div>
   dove
@@ -470,8 +470,8 @@
   <br/>
   Un esempio reale potrebbe essere il seguente:
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-66.png"/>
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-63.png"/>
    </div>
   </div>
   Nelle tabelle di flusso, le celle cerchiate indicano condizioni di stabilità.
@@ -495,16 +495,107 @@
  <div class="environment-body">
   Nel caso si stia descrivendo un automa di Moore, la tabella di flusso prevede delle colonne in più contenenti l'uscita, in quanto si ha che essa dipende solo dallo stato e non dalla configurazione di ingresso.
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-85">
+    <img alt="Immagine" src="../resources/generated-64.png"/>
+   </div>
+  </div>
+  <div class="image-environment">
+   <div class="image-wrapper spaced-85">
+    <img alt="Immagine" src="../resources/generated-65.png"/>
+   </div>
+  </div>
+  Un esempio reale potrebbe essere:
+  <div class="image-environment">
+   <div class="image-wrapper spaced-40">
+    <img alt="Immagine" src="../resources/generated-66.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def4-12">
+ <h2 class="environment-title">
+  Definizione -
+  Tabella delle transizioni
+ </h2>
+ <div class="environment-body">
+  Codificando i simboli degli stati in codice binario e sostituendoli alla tabella di flusso, si ottiene la tabella delle transizioni.
+  <br/>
+  Quindi, data la tabella di flusso
+  <div class="image-environment">
+   <div class="image-wrapper spaced-30">
     <img alt="Immagine" src="../resources/generated-67.png"/>
    </div>
   </div>
+  e la codifica degli stati
+  <div class="image-environment">
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-68.png"/>
+   </div>
+  </div>
+  si può sostituire al simbolo dello stato la sua codifica e si ottiene la seguente tabella delle transizioni
+  <div class="image-environment">
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-69.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def4-13">
+ <h2 class="environment-title">
+  Definizione -
+  Da tabella delle transizioni a espressioni combinatorie
+ </h2>
+ <div class="environment-body">
+  La tabella delle transizioni può essere anche vista come la composizione di diverse tabelle della verità.
+  <br/>
+  Ad esempio, alla seguente tabella
+  <div class="image-environment">
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-70.png"/>
+   </div>
+  </div>
+  corrispondono le seguenti tabelle della verità (o mappe di Karnaugh):
+  <ul class="list-container">
+   <li class="list-item">
+    per lo stato futuro
+    <span class="math-span">
+     \( Y_{1}\)
+    </span>
+    <div class="image-environment">
+     <div class="image-wrapper spaced-40">
+      <img alt="Immagine" src="../resources/generated-71.png"/>
+     </div>
+    </div>
+   </li>
+   <li class="list-item">
+    per lo stato futuro
+    <span class="math-span">
+     \( Y_{0}\)
+    </span>
+    <div class="image-environment">
+     <div class="image-wrapper spaced-40">
+      <img alt="Immagine" src="../resources/generated-72.png"/>
+     </div>
+    </div>
+   </li>
+   <li class="list-item">
+    per l'uscita
+    <span class="math-span">
+     \( z\)
+    </span>
+    <div class="image-environment">
+     <div class="image-wrapper spaced-40">
+      <img alt="Immagine" src="../resources/generated-73.png"/>
+     </div>
+    </div>
+   </li>
+  </ul>
  </div>
 </div>
             </article>
             <nav class="buttons-container content-width">
                 <a class="navigation-button previous" href="stato-di-una-rete-sequenziale.html" rel="nofollow"><span>Stato di una rete sequenziale</span></a>
-                <a class="navigation-button next" href="../memorie-binarie/index.html" rel="nofollow"><span>Memorie binarie</span></a>
+                <a class="navigation-button next" href="comportamenti-in-transitorio.html" rel="nofollow"><span>Comportamenti in transitorio</span></a>
             </nav>
         </section>
         <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">

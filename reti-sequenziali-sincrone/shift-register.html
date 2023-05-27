@@ -57,7 +57,7 @@
   </span>
   (ovvero "l'ultimo" della "coda") il segnale inserito all'istante precedente.
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-60">
     <img alt="Immagine" src="../resources/base-shift-register.png"/>
    </div>
   </div>
@@ -165,7 +165,7 @@
   </span>
   con scorrimento a destra) è molto semplice e sfrutta il fatto che nei flip-flop il tempo di hold è minore del tempo di risposta. Si ha infatti la seguente rete:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/shift-register-circuito.png"/>
    </div>
   </div>
@@ -181,8 +181,8 @@
     </span>
     bit la cui memoria è la seguente
     <div class="image-environment">
-     <div class="image-wrapper">
-      <img alt="Immagine" src="../resources/generated-84.png"/>
+     <div class="image-wrapper spaced-40">
+      <img alt="Immagine" src="../resources/generated-106.png"/>
      </div>
     </div>
     si hanno due possibili comportamenti:
@@ -198,8 +198,8 @@
       </span>
       . Il comportamento sarebbe quindi il seguente:
       <div class="image-environment">
-       <div class="image-wrapper">
-        <img alt="Immagine" src="../resources/generated-85.png"/>
+       <div class="image-wrapper spaced-50">
+        <img alt="Immagine" src="../resources/generated-107.png"/>
        </div>
       </div>
      </li>
@@ -214,8 +214,8 @@
       </span>
       . Il comportamento sarebbe quindi il seguente:
       <div class="image-environment">
-       <div class="image-wrapper">
-        <img alt="Immagine" src="../resources/generated-86.png"/>
+       <div class="image-wrapper spaced-50">
+        <img alt="Immagine" src="../resources/generated-108.png"/>
        </div>
       </div>
      </li>
@@ -232,7 +232,7 @@
  <div class="environment-body">
   Una versione possibile di Logical Shift Register è l'Universal Shift Register che implementa le varie funzionalità messe a disposizione dallo Shift Register con diversi ingressi, attraverso dei codici. Si ha quindi che, considerando il componente relativo alla seguente rete
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/universal-shift-register-circuito.png"/>
    </div>
   </div>
@@ -312,7 +312,7 @@
  <div class="environment-body">
   Una rete che effettua la conversione tra comunicazione seriale e in parallelo secondo Moore è la seguente
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/conversione-serie-parallelo-moore.png"/>
    </div>
   </div>
@@ -332,7 +332,7 @@
   <br/>
   È possibile realizzare anche la rete secondo Mealy nel seguente modo:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/conversione-serie-parallelo-mealy.png"/>
    </div>
   </div>
@@ -357,7 +357,7 @@
  <div class="environment-body">
   Una rete che effettua la conversione tra comunicazione in parallelo e in serie secondo Moore è la seguente:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/conversione-parallelo-serie-moore.png"/>
    </div>
   </div>
@@ -369,7 +369,7 @@
   <br/>
   Ciò equivale ad utilizzare uno shift register nel seguente modo:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/shift-register-parallelo-serie.png"/>
    </div>
   </div>
@@ -404,8 +404,8 @@
   </span>
   ) si ha che il suo shift verso sinistra
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-87.png"/>
+   <div class="image-wrapper spaced-50">
+    <img alt="Immagine" src="../resources/generated-109.png"/>
    </div>
   </div>
   è uguale a
@@ -475,8 +475,8 @@
   <br/>
   Per progettare la rete consideriamo l'algoritmo di moltiplicazione in colonna.
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-88.png"/>
+   <div class="image-wrapper spaced-30">
+    <img alt="Immagine" src="../resources/generated-110.png"/>
    </div>
   </div>
   Si ha che il risultato è la somma delle moltiplicazioni tra il primo fattore e ogni singola cifra del secondo (moltiplicata per il suo peso). Si avrà quindi che ogni addendo della somma avrà come valore quello del primo fattore moltiplicato per
@@ -485,8 +485,8 @@
   </span>
   per un numero di volte uguale alla sua posizione. Ovvero
   <div class="image-environment">
-   <div class="image-wrapper">
-    <img alt="Immagine" src="../resources/generated-89.png"/>
+   <div class="image-wrapper spaced-60">
+    <img alt="Immagine" src="../resources/generated-111.png"/>
    </div>
   </div>
   Un'idea potrebbe quindi essere effettuare lo shift (verso sinistra) di
@@ -501,7 +501,7 @@
   <br/>
   La rete sarà quindi così formata:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-90">
     <img alt="Immagine" src="../resources/kbit-multiplier.png"/>
    </div>
   </div>
@@ -665,13 +665,13 @@
   </span>
   . Si avrà quindi la seguente rete:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/riconosci-sequenze-shift-register.png"/>
    </div>
   </div>
   Questa soluzione utilizza però un numero troppo elevato di componenti. È infatti sufficiente memorizzare solo se il byte è quello desiderato e per farlo conviene controllare inizialmente se il numero è quello corretto e memorizzarlo come singolo bit. Si avrà quindi la seguente rete:
   <div class="image-environment">
-   <div class="image-wrapper">
+   <div class="image-wrapper spaced-80">
     <img alt="Immagine" src="../resources/riconosci-sequenze-shift-register-better.png"/>
    </div>
   </div>
