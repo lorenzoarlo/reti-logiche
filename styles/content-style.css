@@ -3,7 +3,7 @@
   --demonstration-bg: #ff836080;
   --myexample-bg: #b3b3b3;
   --mynote-bg: #bfb48f;
-  --min-width-img: 7rem;
+  --min-width-img: 10rem;
 }
 
 .content-container {
@@ -19,12 +19,18 @@
   flex-flow: column nowrap;
   align-items: stretch;
 
-  border-radius: 24px;
-  padding: 24px;
+  border-radius: 1rem;
+  padding: 1.2rem;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
   margin-block: 16px;
   line-height: 2;
   letter-spacing: 1px;
+}
+
+.code-block {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .environment-title {
@@ -66,70 +72,44 @@
 }
 
 .image-wrapper.spaced-15 {
-  /* max-width: max(15%, 15rem); */
   max-width: max(15%, var(--min-width-img));
-  /* max-width: 15%; */
 }
 .image-wrapper.spaced-20 {
-  /* max-width: max(20%, 15rem); */
   max-width: max(20%, var(--min-width-img));
-  /* max-width: 15%; */
 }
 .image-wrapper.spaced-25 {
-  /* max-width: max(25%, 15rem); */
   max-width: max(25%, var(--min-width-img));
-  /* max-width: 25%; */
 }
 .image-wrapper.spaced-30 {
-  /* max-width: max(30%, 15rem); */
   max-width: max(30%, var(--min-width-img));
-  /* max-width: 30%; */
 }
 .image-wrapper.spaced-35 {
-  /* max-width: max(35%, 15rem); */
   max-width: max(35%, var(--min-width-img));
-  /* max-width: 35%; */
 }
 .image-wrapper.spaced-40 {
-  /* max-width: max(40%, 15rem); */
   max-width: max(40%, var(--min-width-img));
-  /* max-width: 40%; */
 }
 .image-wrapper.spaced-50 {
-  /* max-width: max(50%, 15rem); */
   max-width: max(50%, var(--min-width-img));
-  /* max-width: 50%; */
 }
 .image-wrapper.spaced-60 {
-  /* max-width: max(60%, 15rem); */
   max-width: max(60%, var(--min-width-img));
-  /* max-width: 60%; */
 }
 .image-wrapper.spaced-70 {
-  /* max-width: max(70%, 15rem); */
   max-width: max(70%, var(--min-width-img));
-  /* max-width: 70%; */
 }
 .image-wrapper.spaced-75 {
-  /* max-width: max(75%, 15rem); */
   max-width: max(75%, var(--min-width-img));
-  /* max-width: 75%; */
 }
 .image-wrapper.spaced-80 {
-  /* max-width: max(80%, 15rem); */
   max-width: max(80%, var(--min-width-img));
-  /* max-width: 80%; */
 }
 
 .image-wrapper.spaced-85 {
-  /* max-width: max(85%, 15rem); */
   max-width: max(85%, var(--min-width-img));
-  /* max-width: 85%; */
 }
 .image-wrapper.spaced-90 {
-  /* max-width: max(90%, 15rem); */
   max-width: max(90%, var(--min-width-img));
-  /* max-width: 90%; */
 }
 
 .image-wrapper img {

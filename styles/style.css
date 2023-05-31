@@ -79,8 +79,12 @@ body {
 
 .section-title, .page-title {
   text-align: center;
+  
 }
 
+.section-title {
+  display: block;
+}
 
 /* content-wrapper */
 

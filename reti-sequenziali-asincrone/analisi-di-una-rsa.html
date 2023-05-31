@@ -11,7 +11,6 @@
     <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
     <link rel=”apple-touch-icon” href=”../resources/favicon.ico” />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5785471996225878" crossorigin="anonymous"></script>
     <script src="../scripts/script.js"></script>
     <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
     <meta name="theme-color" content="#ff7f50" />
@@ -37,57 +36,9 @@
             </span>
         </header>
         <section class="content-wrapper">
-            <h1 class="section-title">Analisi di una RSA</h1>
+            <h1 class="section-title content-width">Analisi di una RSA</h1>
             <article class="content-container content-width">
-                <div class="definition environment" id="def4-25">
- <h2 class="environment-title">
-  Definizione -
-  Analisi di una RSA
- </h2>
- <div class="environment-body">
-  Considerando una rete sequenziale asincrona data, per effettuare l'analisi (ovvero risalire al grafo degli stati) è necessario:
-  <ul class="list-container">
-   <li class="list-item">
-    riconoscere variabili in ingresso, in uscita e di stato;
-   </li>
-   <li class="list-item">
-    per ogni uscita e ogni stato futuro, si analizza quindi il circuito combinatorio ad esso correlato, ricordando anche di considerare come ingressi le variabili di stato presente;
-   </li>
-   <li class="list-item">
-    una volta ottenute le varie espressioni combinatorie, si cerca di ricondursi ad una configurazione SP o PS in modo da essere agevoli nel passaggio successivo;
-   </li>
-   <li class="list-item">
-    per ogni espressione si ricostruisce la tabella della verità (utilizzando ad esempio le mappe di Karnaugh "riempite" adeguatamente considerando mintermini e maxtermini). In questo passaggio si verifica anche se sono state eliminate a priori le alee statiche con la configurazione ridondante;
-   </li>
-   <li class="list-item">
-    unendo le tabelle della verità si ottiene una tabella delle transizioni completamente specificata (anche se non tutte sono significativamente utili). Ogni cella che ha come destinazione il proprio stato, la si considera una cella stabile.
-   </li>
-   <li class="list-item">
-    per risalire al comportamento della rete è necessario modificare la tabella per ottenere la tabella di flusso originaria. Per farlo si deve:
-    <ul class="list-container">
-     <li class="list-item">
-      nelle colonne prive di stati stabili si pongono tutte le celle ad indifferenze in quanto sono ingressi non disponibili per la rete (in quanto se lo fossero, si avrebbero solo transizioni multiple inutili);
-     </li>
-     <li class="list-item">
-      guardando ogni colonna, si eliminano le varie transizioni multiple, inserendo in ogni cella lo stato di destinazione;
-     </li>
-     <li class="list-item">
-      per ogni riga (ovvero per ogni stato), si pongono ad indifferenza le celle non adiacenti a stati stabili (sulla riga) in quanto non si potrebbe raggiungerle modificando un solo bit di ingresso alla volta;
-     </li>
-     <li class="list-item">
-      si elimina ogni riga (ovvero ogni stato) che non contiene alcuna cella stabile (in quanto non presente nel grafo iniziale);
-     </li>
-     <li class="list-item">
-      nel caso si stia trattando un automa di Mealy (evidente dal fatto che su una stessa riga si hanno uscite differenti), si pone l'indifferenza sulle uscite delle celle delle transizioni in cui l'uscita varia.
-     </li>
-    </ul>
-   </li>
-   <li class="list-item">
-    si cerca di creare una descrizione testuale che descrive il comportamento della rete.
-   </li>
-  </ul>
- </div>
-</div>
+                <div class="definition environment" id="def4-25"><h2 class="environment-title">Definizione - Analisi di una RSA</h2><div class="environment-body">     Considerando una rete sequenziale asincrona data, per effettuare l'analisi (ovvero risalire al grafo degli stati) è necessario:     <ul class="list-container"><li class="list-item">riconoscere variabili in ingresso, in uscita e di stato;         </li><li class="list-item">per ogni uscita e ogni stato futuro, si analizza quindi il circuito combinatorio ad esso correlato, ricordando anche di considerare come ingressi le variabili di stato presente;         </li><li class="list-item">una volta ottenute le varie espressioni combinatorie, si cerca di ricondursi ad una configurazione SP o PS in modo da essere agevoli nel passaggio successivo;         </li><li class="list-item">per ogni espressione si ricostruisce la tabella della verità (utilizzando ad esempio le mappe di Karnaugh "riempite" adeguatamente considerando mintermini e maxtermini). In questo passaggio si verifica anche se sono state eliminate a priori le alee statiche con la configurazione ridondante;         </li><li class="list-item">unendo le tabelle della verità si ottiene una tabella delle transizioni completamente specificata (anche se non tutte sono significativamente utili). Ogni cella che ha come destinazione il proprio stato, la si considera una cella stabile.         </li><li class="list-item">per risalire al comportamento della rete è necessario modificare la tabella per ottenere la tabella di flusso originaria. Per farlo si deve:         <ul class="list-container"><li class="list-item">nelle colonne prive di stati stabili si pongono tutte le celle ad indifferenze in quanto sono ingressi non disponibili per la rete (in quanto se lo fossero, si avrebbero solo transizioni multiple inutili);             </li><li class="list-item">guardando ogni colonna, si eliminano le varie transizioni multiple, inserendo in ogni cella lo stato di destinazione;             </li><li class="list-item">per ogni riga (ovvero per ogni stato), si pongono ad indifferenza le celle non adiacenti a stati stabili (sulla riga) in quanto non si potrebbe raggiungerle modificando un solo bit di ingresso alla volta;             </li><li class="list-item">si elimina ogni riga (ovvero ogni stato) che non contiene alcuna cella stabile (in quanto non presente nel grafo iniziale);             </li><li class="list-item">nel caso si stia trattando un automa di Mealy (evidente dal fatto che su una stessa riga si hanno uscite differenti), si pone l'indifferenza sulle uscite delle celle delle transizioni in cui l'uscita varia.         </li></ul></li><li class="list-item">si cerca di creare una descrizione testuale che descrive il comportamento della rete.     </li></ul></div></div>
             </article>
             <nav class="buttons-container content-width">
                 <a class="navigation-button previous" href="vincoli-per-il-corretto-funzionamento-di-una-rsa.html" rel="nofollow"><span>Vincoli per il corretto funzionamento di una RSA</span></a>

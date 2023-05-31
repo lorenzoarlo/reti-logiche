@@ -11,7 +11,6 @@
     <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
     <link rel=”apple-touch-icon” href=”../resources/favicon.ico” />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5785471996225878" crossorigin="anonymous"></script>
     <script src="../scripts/script.js"></script>
     <style>:root { --bg-clr: #ff7f50; --fg-clr: #262626; }</style>
     <meta name="theme-color" content="#ff7f50" />
@@ -37,141 +36,9 @@
             </span>
         </header>
         <section class="content-wrapper">
-            <h1 class="section-title">Flip-flop D</h1>
+            <h1 class="section-title content-width">Flip-flop D</h1>
             <article class="content-container content-width">
-                <div class="definition environment" id="def5-11">
- <h2 class="environment-title">
-  Definizione -
-  Flip-flop D
- </h2>
- <div class="environment-body">
-  Il Flip-flop D
-  <div class="image-environment">
-   <div class="image-wrapper spaced-50">
-    <img alt="Immagine" src="../resources/flip-flop-d.png"/>
-   </div>
-  </div>
-  è una rete sequenziale asincrona caratterizzata da:
-  <ul class="list-container">
-   <li class="list-item">
-    un ingresso
-    <span class="math-span">
-     \( D\)
-    </span>
-    , che indica il dato da memorizzare;
-   </li>
-   <li class="list-item">
-    un ingresso
-    <span class="math-span">
-     \( CLK\)
-    </span>
-    , che svolge il ruolo di segnale di campionamento;
-   </li>
-   <li class="list-item">
-    due uscite che rendono disponibile il valore del bit memorizzato (
-    <span class="math-span">
-     \( Q\)
-    </span>
-    ) ed il suo complemento (
-    <span class="math-span">
-     \( Q'\)
-    </span>
-    ).
-   </li>
-  </ul>
-  A differenza del Latch CD (dove il periodo di campionamento poteva durare potenzialmente all'infinito) il Flip Flop D "campiona" solo per un istante il segnale D, ovvero durante il suo fronte di salita (nel caso di Flip-flop positive edge triggered).
-  <br/>
-  A seguito del campionamento, l'uscita Q riflette il valore campionato con un ritardo che permette il montaggio in retroazione.
-  <br/>
-  I tempi caratteristici di un Flip-flop D hanno gli stessi nomi di quelli del Latch CD, ma con significati leggermente diversi in quanto sono tutti riferiti al fronte di salita del clock (in quanto è l'unico evento che può modificare lo stato).      In particolare si ha che:
-  <ul class="list-container">
-   <li class="list-item">
-    il tempo di set-up indica il tempo minimo per cui D deve rimanere costante prima del fronte;
-   </li>
-   <li class="list-item">
-    il tempo di hold indica il tempo minimo per cui D deve rimanere costante dopo al fronte;
-   </li>
-   <li class="list-item">
-    il tempo di risposta indica il tempo massimo del transitorio delle uscite Q e Q'.
-   </li>
-  </ul>
-  Un modo per realizzare questa rete è utilizzare due Latch CD in cascata nel seguente modo:
-  <div class="image-environment">
-   <div class="image-wrapper spaced-70">
-    <img alt="Immagine" src="../resources/flipflop-master-slave.png"/>
-   </div>
-  </div>
-  Per comprendere il funzionamento, può essere utile immaginare i due ingressi in uno stato di quiete, entrambi a
-  <span class="math-span">
-   \( 0\)
-  </span>
-  .     In questa situazione si ha che il "Latch Master" è in fase di campionamento (grazie al NOT che trasforma il segnale in
-  <span class="math-span">
-   \( 1\)
-  </span>
-  ) mentre l'altro è in fase di stabilità.      Nel momento in cui CLK passa da
-  <span class="math-span">
-   \( 0\)
-  </span>
-  a
-  <span class="math-span">
-   \( 1\)
-  </span>
-  , si ha che il "Latch Slave" inizia il campionamento e in questo momento assume il valore "memorizzato" nel Master (che ha continuato a memorizzare il valore di D). Fino a che CLK non vedrà un altro fronte di salita, la rete non riaggiornerà le sue uscite dato che:
-  <ul class="list-container">
-   <li class="list-item">
-    fino a che CLK rimane a
-    <span class="math-span">
-     \( 1\)
-    </span>
-    si avrà che il Master non è in campionamento (e continua a memorizzare il segnale "attuale per la rete" di D);
-   </li>
-   <li class="list-item">
-    quando CLK passa a
-    <span class="math-span">
-     \( 1\)
-    </span>
-    a
-    <span class="math-span">
-     \( 0\)
-    </span>
-    , sarà lo Slave a terminare il campionamento (e a non riaggiornarsi).
-   </li>
-  </ul>
-  Il problema di tale implementazione è dovuto alla presenza del NOT: esso introduce un ritardo che potrebbe disallineare i segnali C dei Latch. Per ovviare a ciò è possibile utilizzare due segnali di clock (clock a due fasi) che garantiscono un periodo di memorizzazione ad ogni latch prima di portarne uno in trasparenza.
-  <br/>
-  Un'altra sintesi possibile è quella "Edge-Triggered": essa contiene scelte progettuali non intuitive (come l'utilizzo di tre variabili di stato) ma utilizza meno gate rispetto a quella "Master-Slave". Essa utilizza infatti solo 6 NAND (invece di 8) e prevede che i comandi
-  <span class="math-span">
-   \( PRE'\)
-  </span>
-  e
-  <span class="math-span">
-   \( CLR'\)
-  </span>
-  siano prioritari rispetto al segnale CLK: per questo motivo essi sono detti comandi asincroni.
- </div>
-</div>
-<div class="definition environment" id="def5-12">
- <h2 class="environment-title">
-  Definizione -
-  Flip-flop D come elemento di ritardo
- </h2>
- <div class="environment-body">
-  Se l'ingresso CLK è pilotato da un segnale periodico (detto di clock) il Flip-flop ritarda il segnale di uscita Q (rispetto al segnale di ingresso D) di un tempo pari al periodo di clock. Si ha quindi che il clock divide il tempo in intervalli discreti in cui vale la relazione
-  <span class="math-block">
-   \[         Q^{n + 1} = D^{n}         \]
-  </span>
-  ovvero si ha che l'uscita Q all'istante
-  <span class="math-span">
-   \( n + 1\)
-  </span>
-  è uguale all'ingresso D all'istante precedente
-  <span class="math-span">
-   \( n\)
-  </span>
-  .
- </div>
-</div>
+                <div class="definition environment" id="def5-11"><h2 class="environment-title">Definizione - Flip-flop D</h2><div class="environment-body">     Il Flip-flop D     <div class="image-environment"><div class="image-wrapper spaced-50"><img alt="Immagine" src="../resources/flip-flop-d.png"/></div></div>     è una rete sequenziale asincrona caratterizzata da:     <ul class="list-container"><li class="list-item">un ingresso <span class="math-span">\( D\)</span>, che indica il dato da memorizzare;         </li><li class="list-item">un ingresso <span class="math-span">\( CLK\)</span>, che svolge il ruolo di segnale di campionamento;         </li><li class="list-item">due uscite che rendono disponibile il valore del bit memorizzato (<span class="math-span">\( Q\)</span>) ed il suo complemento (<span class="math-span">\( Q'\)</span>).     </li></ul>     A differenza del Latch CD (dove il periodo di campionamento poteva durare potenzialmente all'infinito) il Flip Flop D "campiona" solo per un istante il segnale D, ovvero durante il suo fronte di salita (nel caso di Flip-flop positive edge triggered).      <br/>     A seguito del campionamento, l'uscita Q riflette il valore campionato con un ritardo che permette il montaggio in retroazione.     <br/>     I tempi caratteristici di un Flip-flop D hanno gli stessi nomi di quelli del Latch CD, ma con significati leggermente diversi in quanto sono tutti riferiti al fronte di salita del clock (in quanto è l'unico evento che può modificare lo stato).      In particolare si ha che:     <ul class="list-container"><li class="list-item">il tempo di set-up indica il tempo minimo per cui D deve rimanere costante prima del fronte;         </li><li class="list-item">il tempo di hold indica il tempo minimo per cui D deve rimanere costante dopo al fronte;         </li><li class="list-item">il tempo di risposta indica il tempo massimo del transitorio delle uscite Q e Q'.     </li></ul>     Un modo per realizzare questa rete è utilizzare due Latch CD in cascata nel seguente modo:     <div class="image-environment"><div class="image-wrapper spaced-70"><img alt="Immagine" src="../resources/flipflop-master-slave.png"/></div></div>     Per comprendere il funzionamento, può essere utile immaginare i due ingressi in uno stato di quiete, entrambi a <span class="math-span">\( 0\)</span>.     In questa situazione si ha che il "Latch Master" è in fase di campionamento (grazie al NOT che trasforma il segnale in <span class="math-span">\( 1\)</span>) mentre l'altro è in fase di stabilità.      Nel momento in cui CLK passa da <span class="math-span">\( 0\)</span> a <span class="math-span">\( 1\)</span>, si ha che il "Latch Slave" inizia il campionamento e in questo momento assume il valore "memorizzato" nel Master (che ha continuato a memorizzare il valore di D). Fino a che CLK non vedrà un altro fronte di salita, la rete non riaggiornerà le sue uscite dato che:     <ul class="list-container"><li class="list-item">fino a che CLK rimane a <span class="math-span">\( 1\)</span> si avrà che il Master non è in campionamento (e continua a memorizzare il segnale "attuale per la rete" di D);         </li><li class="list-item">quando CLK passa a <span class="math-span">\( 1\)</span> a <span class="math-span">\( 0\)</span>, sarà lo Slave a terminare il campionamento (e a non riaggiornarsi).     </li></ul>       Il problema di tale implementazione è dovuto alla presenza del NOT: esso introduce un ritardo che potrebbe disallineare i segnali C dei Latch. Per ovviare a ciò è possibile utilizzare due segnali di clock (clock a due fasi) che garantiscono un periodo di memorizzazione ad ogni latch prima di portarne uno in trasparenza.     <br/>     Un'altra sintesi possibile è quella "Edge-Triggered": essa contiene scelte progettuali non intuitive (come l'utilizzo di tre variabili di stato) ma utilizza meno gate rispetto a quella "Master-Slave". Essa utilizza infatti solo 6 NAND (invece di 8) e prevede che i comandi <span class="math-span">\( PRE'\)</span> e <span class="math-span">\( CLR'\)</span> siano prioritari rispetto al segnale CLK: per questo motivo essi sono detti comandi asincroni.  </div></div><div class="definition environment" id="def5-12"><h2 class="environment-title">Definizione - Flip-flop D come elemento di ritardo</h2><div class="environment-body">     Se l'ingresso CLK è pilotato da un segnale periodico (detto di clock) il Flip-flop ritarda il segnale di uscita Q (rispetto al segnale di ingresso D) di un tempo pari al periodo di clock. Si ha quindi che il clock divide il tempo in intervalli discreti in cui vale la relazione     <span class="math-block">\[         Q^{n + 1} = D^{n}         \]</span>     ovvero si ha che l'uscita Q all'istante <span class="math-span">\( n + 1\)</span> è uguale all'ingresso D all'istante precedente <span class="math-span">\( n\)</span>. </div></div>
             </article>
             <nav class="buttons-container content-width">
                 <a class="navigation-button previous" href="latch-cd.html" rel="nofollow"><span>Latch CD</span></a>
