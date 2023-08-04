@@ -13,4 +13,7 @@
 .about-wrapper p {
   margin: 0 auto;
   text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }

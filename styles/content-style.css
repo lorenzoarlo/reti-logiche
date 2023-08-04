@@ -42,6 +42,9 @@
 .environment-body {
   font-size: 0.8rem;
   text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .definition {
