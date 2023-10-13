@@ -67,6 +67,26 @@
   margin-block: 6px;
 }
 
+.inner-title {
+  display: block;
+  font-size: 1.1em;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-block: 0.1em;
+}
+
+.center {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.mono {
+  letter-spacing: 1px;
+  font-family: monospace;
+}
+
+
 .image-environment,
 .image-wrapper {
   margin-block: 6px;
@@ -143,4 +163,5 @@
   display: block;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
 }
