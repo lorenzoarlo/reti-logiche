@@ -33,6 +33,15 @@ function toggle_proof(event) {
     sender.innerText = (sender.innerText === 'visibility') ? 'visibility_off' : 'visibility';
 }
 
+function expand_environment(event) {
+    const sender = event.srcElement;
+    const body_env = sender.parentElement.parentElement;
+    body_env.querySelector(".environment-body").classList.toggle("collapsed");
+    sender.innerText = (sender.innerText === 'expand_more') ? 'expand_less' : 'expand_more';
+}
+
+
+
 function load_lacb() {
     const LACB_URL = "https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/lacb.js"
     return new Promise(function(resolve) {
