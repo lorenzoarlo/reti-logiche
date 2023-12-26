@@ -26,6 +26,12 @@ function scroll_to_bottom() {
     if(footer !== null) footer.scrollIntoView({"behavior": "smooth"});
 }
 
+function toggle_sidebar(e) {
+    const sidebar = document.querySelector(".sidebar");
+    const now = sidebar.classList.toggle("active");
+    e.innerText = (now) ? "keyboard_double_arrow_left" : "keyboard_double_arrow_right";
+}
+
 function toggle_proof(event) {
     const sender = event.srcElement;
     const proof_env = sender.parentElement.parentElement;

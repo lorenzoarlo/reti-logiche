@@ -3,11 +3,19 @@
 }
 
 .index-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-items: center;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .index-container li {
@@ -16,13 +24,28 @@
   letter-spacing: 1px;
 }
 
-.index-container li:hover::before {
+.index-container li:hover::before, .index-container li.current::before {
   font-variation-settings: "FILL" 1;
 }
 
 .index-container li a {
   text-decoration: none;
   color: var(--sec-fg-clr);
+  background-image: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(transparent),
+    color-stop(90%, transparent),
+    color-stop(90%, black),
+    to(black)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    transparent 0%,
+    transparent 90%,
+    black 90%,
+    black 100%
+  );
   background-image: linear-gradient(
     to bottom,
     transparent 0%,
@@ -33,6 +56,8 @@
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position-x: right;
+  -webkit-transition: background-size 300ms;
+  -o-transition: background-size 300ms;
   transition: background-size 300ms;
 }
 
@@ -43,11 +68,16 @@
 
 .index-container li::before {
   display: inline-block;
-  padding-inline-end: 0.75em;
+  -webkit-padding-end: 0.75em;
+          padding-inline-end: 0.75em;
   vertical-align: middle;
   font-family: "Material Symbols Outlined";
   color: initial;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  -o-transition: transform 200ms;
   transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .section-li {

@@ -8,21 +8,36 @@
 }
 
 .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 
   gap: 16px;
 }
 
 .environment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 
   border-radius: 1rem;
   padding: 1.2rem;
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
   margin-block: 16px;
   line-height: 2;
   letter-spacing: 1px;
@@ -37,6 +52,12 @@
   padding: 5px;
 }
 
+.overline {
+  padding-top: 0.3em;
+  border-top: 1.5px solid;
+  line-height: 1em;
+}
+
 .code-block {
   display: block;
   background-color: var(--code-bg);
@@ -44,7 +65,9 @@
   border-radius: 1rem;
   font-size: 0.75em;
   
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);;
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+  
+          box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);;
   width: 100%;
   overflow-x: auto;
   margin-block: 6px;
@@ -66,6 +89,7 @@
 }
 
 .environment-tail {
+  display: -ms-grid;
   display: grid;
   justify-items: center;
   font-size: 32px;
@@ -121,6 +145,7 @@
 .image-environment,
 .image-wrapper {
   margin-block: 6px;
+  display: -ms-grid;
   display: grid;
   place-items: center center;
 }
@@ -177,8 +202,15 @@
 .body-visibility-icon {
   vertical-align: middle;
   margin-inline: 0.5em;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+
+  -webkit-transition: background-color 500ms;
+
+  -o-transition: background-color 500ms;
 
   transition: background-color 500ms;
   padding: 4px;
