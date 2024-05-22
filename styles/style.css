@@ -310,9 +310,9 @@ body {
   gap: 16px;
 }
 
-.privacy-wrapper,
-.privacy-wrapper a:link,
-.privacy-wrapper a:visited {
+.privacy-wrapper, .copyright-wrapper,
+.privacy-wrapper a:link, .copyright-wrapper a:link,
+.privacy-wrapper a:visited, .copyright-wrapper a:visited {
   color: var(--fg-clr);
 }
 
